@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>BaseLogin - Character NFT template</title>
-    <meta property="og:title" content="BaseLogin - Character NFT template" />
+    <title>404 - Not Found</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -45,54 +44,19 @@
     <!-- <style> ... </style> -->
   </head>
   <body>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <div>
-      <link href="./base-login.css" rel="stylesheet" />
+      <link href="../css/404.css" rel="stylesheet" />
 
-      <div class="base-login-container">
-        <div class="base-login-row">
-          <div class="base-login-card">
-            <div class="base-login-avatar">
-              <img
-                alt="image"
-                src="public/Avatars/avatar.svg"
-                class="base-login-avatar1"
-              />
-            </div>
-            <div class="base-login-main">
-              <div class="base-login-content">
-                <h2 class="base-login-header">Are you looking for work?</h2>
-                <p class="base-login-description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliquat
-                  enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi
-                </p>
-              </div>
-              <button type="button" class="button">Employee Login</button>
-            </div>
-          </div>
-          <div class="base-login-card1">
-            <div class="base-login-avatar2">
-              <img
-                alt="image"
-                src="public/Avatars/avatar.svg"
-                class="base-login-avatar3"
-              />
-            </div>
-            <div class="base-login-main1">
-              <div class="base-login-content1">
-                <h2 class="base-login-header1">Are you looking to hire?</h2>
-                <p class="base-login-description1">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliquat
-                  enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi
-                </p>
-              </div>
-              <button type="button" class="button">Employer Login</button>
-            </div>
-          </div>
+      <div class="not-found-container">
+        <h3>OOPS! PAGE NOT FOUND</h3>
+        <div class="not-found-container1">
+          <h1 class="not-found-text1">404</h1>
+        </div>
+        <div class="not-found-container2">
+          <h2 class="not-found-text2">
+            WE ARE SORRY, BUT THE PAGE YOU REQUESTED WAS NOT FOUND
+          </h2>
         </div>
       </div>
     </div>

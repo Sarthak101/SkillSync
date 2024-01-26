@@ -45,9 +45,9 @@
     <!-- <style> ... </style> -->
   </head>
   <body>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <div>
-      <link href="./index.css" rel="stylesheet" />
+      <link href="../css/index.css" rel="stylesheet" />
 
       <div class="home-container">
         <header data-thq="thq-navbar" class="home-navbar">
@@ -74,14 +74,14 @@
               <button class="social button">
                 <img
                   alt="image"
-                  src="public/Icons/twitter.svg"
+                  src="../public/Icons/twitter.svg"
                   class="home-image"
                 />
               </button>
               <button class="social button">
                 <img
                   alt="image"
-                  src="public/Icons/discord.svg"
+                  src="../public/Icons/discord.svg"
                   class="home-image01"
                 />
               </button>
@@ -161,7 +161,7 @@
         <section class="home-description">
           <img
             alt="image"
-            src="public/hero-divider-1500w.png"
+            src="../public/hero-divider-1500w.png"
             class="home-divider-image"
           />
           <div class="home-container3">
@@ -188,7 +188,7 @@
                   <span>Follow us on Twitter</span>
                   <img
                     alt="image"
-                    src="public/Icons/arrow.svg"
+                    src="../public/Icons/arrow.svg"
                     class="home-arrow"
                   />
                 </a>
@@ -201,7 +201,7 @@
                   <span>Join us on Discord</span>
                   <img
                     alt="image"
-                    src="public/Icons/arrow.svg"
+                    src="../public/Icons/arrow.svg"
                     class="home-arrow1"
                   />
                 </a>
@@ -215,7 +215,7 @@
               <div class="home-avatar">
                 <img
                   alt="image"
-                  src="public/Avatars/avatar.svg"
+                  src="../public/Avatars/avatar.svg"
                   class="home-avatar1"
                 />
               </div>
@@ -233,7 +233,7 @@
                   <span class="home-text07">Learn more</span>
                   <img
                     alt="image"
-                    src="public/Icons/arrow.svg"
+                    src="../public/Icons/arrow.svg"
                     class="home-image02"
                   />
                 </button>
@@ -243,7 +243,7 @@
               <div class="home-avatar2">
                 <img
                   alt="image"
-                  src="public/Avatars/default-avatar.svg"
+                  src="../public/Avatars/default-avatar.svg"
                   class="home-avatar3"
                 />
               </div>
@@ -263,7 +263,7 @@
                   <span class="home-text08">Learn more</span>
                   <img
                     alt="image"
-                    src="public/Icons/arrow-2.svg"
+                    src="../public/Icons/arrow-2.svg"
                     class="home-image03"
                   />
                 </button>
@@ -274,7 +274,7 @@
             <div class="home-avatar4">
               <img
                 alt="image"
-                src="public/Avatars/light-avatar.svg"
+                src="../public/Avatars/light-avatar.svg"
                 class="home-avatar5"
               />
             </div>
@@ -295,14 +295,14 @@
                   <span class="home-text09">Learn more</span>
                   <img
                     alt="image"
-                    src="public/Icons/arrow-2.svg"
+                    src="../public/Icons/arrow-2.svg"
                     class="home-image04"
                   />
                 </button>
               </div>
               <img
                 alt="image"
-                src="public/group%202262.svg"
+                src="../public/group%202262.svg"
                 class="home-image05"
               />
             </div>
@@ -324,7 +324,7 @@
               <div class="home-image06">
                 <img
                   alt="image"
-                  src="public/Characters/character-1.svg"
+                  src="../public/Characters/character-1.svg"
                   class="home-image07"
                 />
               </div>
@@ -337,7 +337,7 @@
               <div class="home-image08">
                 <img
                   alt="image"
-                  src="public/Characters/character-2.svg"
+                  src="../public/Characters/character-2.svg"
                   class="home-image09"
                 />
               </div>
@@ -350,7 +350,7 @@
               <div class="home-image10">
                 <img
                   alt="image"
-                  src="public/Characters/character-3.svg"
+                  src="../public/Characters/character-3.svg"
                   class="home-image11"
                 />
               </div>
@@ -363,7 +363,7 @@
               <div class="home-image12">
                 <img
                   alt="image"
-                  src="public/Characters/character-4.svg"
+                  src="../public/Characters/character-4.svg"
                   class="home-image13"
                 />
               </div>
@@ -379,7 +379,7 @@
               <div class="home-image14">
                 <img
                   alt="image"
-                  src="public/Characters/character-5.svg"
+                  src="../public/Characters/character-5.svg"
                   class="home-image15"
                 />
               </div>
@@ -392,7 +392,7 @@
               <div class="home-image16">
                 <img
                   alt="image"
-                  src="public/Characters/character-6.svg"
+                  src="../public/Characters/character-6.svg"
                   class="home-image17"
                 />
               </div>
@@ -405,7 +405,7 @@
               <div class="home-image18">
                 <img
                   alt="image"
-                  src="public/Characters/character-7.svg"
+                  src="../public/Characters/character-7.svg"
                   class="home-image19"
                 />
               </div>
@@ -418,7 +418,7 @@
               <div class="home-image20">
                 <img
                   alt="image"
-                  src="public/Characters/character-8.svg"
+                  src="../public/Characters/character-8.svg"
                   class="home-image21"
                 />
               </div>
@@ -447,21 +447,21 @@
                 <span>Learn More</span>
                 <img
                   alt="image"
-                  src="public/Icons/arrow.svg"
+                  src="../public/Icons/arrow.svg"
                   class="home-image22"
                 />
               </button>
             </div>
             <img
               alt="image"
-              src="public/group%202415.svg"
+              src="../public/group%202415.svg"
               class="home-image23"
             />
           </div>
           <div class="home-mining">
             <img
               alt="image"
-              src="public/group%202422.svg"
+              src="../public/group%202422.svg"
               class="home-image24"
             />
             <div class="home-content14">
@@ -488,7 +488,7 @@
                 <span>Learn More</span>
                 <img
                   alt="image"
-                  src="public/Icons/arrow.svg"
+                  src="../public/Icons/arrow.svg"
                   class="home-image25"
                 />
               </button>
@@ -569,7 +569,7 @@
                   <div class="home-item">
                     <img
                       alt="image"
-                      src="public/Icons/people.svg"
+                      src="../public/Icons/people.svg"
                       class="home-image26"
                     />
                     <p class="home-header20">Consectetur adipiscing elit</p>
@@ -577,7 +577,7 @@
                   <div class="home-item1">
                     <img
                       alt="image"
-                      src="public/Icons/paper.svg"
+                      src="../public/Icons/paper.svg"
                       class="home-image27"
                     />
                     <p class="home-header21">Consectetur adipiscing elit</p>
@@ -585,7 +585,7 @@
                   <div class="home-item2">
                     <img
                       alt="image"
-                      src="public/Icons/checklist.svg"
+                      src="../public/Icons/checklist.svg"
                       class="home-image28"
                     />
                     <p class="home-header22">Consectetur adipiscing elit</p>
@@ -609,7 +609,7 @@
             </div>
             <img
               alt="image"
-              src="public/group%202273.svg"
+              src="../public/group%202273.svg"
               class="home-image29"
             />
           </div>
@@ -799,7 +799,7 @@
               <div class="home-card11">
                 <img
                   alt="image"
-                  src="public/Characters/character-9.svg"
+                  src="../public/Characters/character-9.svg"
                   class="home-image30"
                 />
               </div>
@@ -808,7 +808,7 @@
               <div class="home-card12">
                 <img
                   alt="image"
-                  src="public/Characters/character-10.svg"
+                  src="../public/Characters/character-10.svg"
                   class="home-image31"
                 />
               </div>
@@ -847,7 +847,7 @@
                 >
                   <img
                     alt="image"
-                    src="public/Icons/twitter.svg"
+                    src="../public/Icons/twitter.svg"
                     class="home-image32"
                   />
                 </a>
@@ -859,7 +859,7 @@
                 >
                   <img
                     alt="image"
-                    src="public/Icons/discord.svg"
+                    src="../public/Icons/discord.svg"
                     class="home-image33"
                   />
                 </a>
@@ -905,7 +905,7 @@
               >
                 <img
                   alt="image"
-                  src="public/Icons/twitter.svg"
+                  src="../public/Icons/twitter.svg"
                   class="home-image34"
                 />
               </a>
@@ -917,7 +917,7 @@
               >
                 <img
                   alt="image"
-                  src="public/Icons/discord.svg"
+                  src="../public/Icons/discord.svg"
                   class="home-image35"
                 />
               </a>
