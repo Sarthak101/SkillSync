@@ -33,7 +33,7 @@
             <div class="menu">
 
                 <ul class="menu-links">
-                    <li class="nav-link">
+                    <li class="nav-link" >
                         <a href="#">
                             <i class='bx bx-home-alt icon'></i>
                             <span class="text nav-text">Dashboard</span>
@@ -42,7 +42,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="attend.php">
+                        <a href="jobs.php">
                             <i class='bx bx-bar-chart-alt-2 icon'></i>
                             <span class="text nav-text">Jobs</span>
                         </a>
@@ -50,7 +50,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="messages.php">
+                        <a href="requests.php">
                             <i class='bx bx-chat icon'></i>
                             <span class="text nav-text">Requests</span>
                         </a>
@@ -70,7 +70,7 @@
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="#">
+                    <a href="base-login.php">
                         <i class='bx bx-log-out icon'></i>
                         <span class="text nav-text">Logout</span>
                     </a>
