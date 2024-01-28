@@ -24,7 +24,17 @@
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
+  display: flex;
+  align-items: center;
 }
+
+.home-logo img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
 .home-desktop-menu {
   display: flex;
 }
@@ -254,13 +264,13 @@
 }
 .home-paragraph {
   color: #ffffff;
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 18px;
+  line-height: 27px;
 }
 .home-paragraph1 {
   color: rgb(255, 255, 255);
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 18px;
+  line-height: 27px;
 }
 .home-links {
   width: 100%;
@@ -2423,4 +2433,8 @@
   .home-row2 {
     height: 350px;
   }
+}
+
+#about-section {
+  margin-left: auto;
 }

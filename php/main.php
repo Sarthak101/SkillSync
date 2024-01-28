@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Character NFT template</title>
+    <title>SkillSync</title>
     <meta property="og:title" content="Character NFT template" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -51,7 +51,10 @@
 
       <div class="home-container">
         <header data-thq="thq-navbar" class="home-navbar">
-          <span class="home-logo">Character</span>
+          <span class="home-logo">
+            <img src = "../public/Icons/logo.png" alt = "logo">
+            SkillSync
+          </span>
           <div
             data-thq="thq-navbar-nav"
             data-role="Nav"
@@ -62,8 +65,8 @@
               data-role="Nav"
               class="home-nav"
             >
-              <button class="home-button button-clean button">About</button>
-              <button class="home-button1 button-clean button">Features</button>
+              <button class="home-button button-clean button" onclick="scrollToSection('about-section')">About</button>
+              <button class="home-button1 button-clean button" onclick="scrollToSection('feature-section')">Features</button>
               <button class="home-button2 button-clean button">Pricing</button>
               <button class="home-button3 button-clean button">Team</button>
               <button class="home-button4 button-clean button">Blog</button>
@@ -113,19 +116,20 @@
                   </svg>
                 </div>
               </div>
+              <!-- Navbar for mobile width -->
               <nav
                 data-thq="thq-mobile-menu-nav-links"
                 data-role="Nav"
                 class="home-nav2"
               >
-                <span class="home-text">About</span>
+                <span class="home-text" onclick="scrollToSection('about-section')">About</span>
                 <span class="home-text01">Features</span>
                 <span class="home-text02">Pricing</span>
                 <span class="home-text03">Team</span>
                 <span class="home-text04">Blog</span>
               </nav>
               <div class="home-container2">
-                <button class="home-login button">Login</button>
+              <a href="base-login.php" class="home-view button">Login</a>
                 <button class="button">Register</button>
               </div>
             </div>
@@ -148,14 +152,10 @@
         </header>
         <section class="home-hero">
           <div class="home-heading">
-            <h1 class="home-header">Create yourself for the metaverse</h1>
+            <h1 class="home-header">Find work that works for you.</h1>
             <p class="home-caption">
-              A character custom collection is joining the NFT space on Opensea.
+              Generating job opportunities and ensuring income stability for workers.
             </p>
-          </div>
-          <div class="home-buttons">
-            <button class="button">View on Opensea</button>
-            <button class="home-learn button-clean button">Learn more</button>
           </div>
         </section>
         <section class="home-description">
@@ -164,47 +164,26 @@
             src="../public/hero-divider-1500w.png"
             class="home-divider-image"
           />
+        </section>
+        <section id="about-section">
           <div class="home-container3">
             <div class="home-description01">
               <div class="home-content">
+                <h2 class="home-header04">About us</h2>
                 <p class="home-paragraph">
-                  We are a team of digital aute irure dolor in reprehenderit in
-                  voluptate velit esse cillum dolore eu fugiat.
+                  SkillSync pioneers a revolutionary shift in the unorganized sector by seamlessly
+                  connecting employers with skilled workers using location data. Our platform simplifies
+                  hiring, offering a user-friendly interfaces for ideal matches. By organizing this
+                  sector, SkillSync generates job opportunities, ensuring income stability for workers and
+                  improving economic growth
                 </p>
                 <p class="home-paragraph1">
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                  qui officia deserunt mollit anim id est laborum. Nemo enim
-                  ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                  fugit.
+                  SkillSync's impact extends beyond convenience, reshaping the socioeconomic fabric
+                  Emphasizing collaboration and partnerships, we foster a harmonized marketplace, promoting
+                  transparency and mutual benefit. Our commitment to innovation and collaboration drives us to
+                  create a connected, fair, and prosperous ecosystem, propelling sustainable economic growth
+                  and empowerment in this evolving sector.
                 </p>
-              </div>
-              <div class="home-links">
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="home-link button-link button"
-                >
-                  <span>Follow us on Twitter</span>
-                  <img
-                    alt="image"
-                    src="../public/Icons/arrow.svg"
-                    class="home-arrow"
-                  />
-                </a>
-                <a
-                  href="https://discord.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="home-link01 button-link button"
-                >
-                  <span>Join us on Discord</span>
-                  <img
-                    alt="image"
-                    src="../public/Icons/arrow.svg"
-                    class="home-arrow1"
-                  />
-                </a>
               </div>
             </div>
           </div>
@@ -221,12 +200,11 @@
               </div>
               <div class="home-main">
                 <div class="home-content01">
-                  <h2 class="home-header01">10,000+ unique characters</h2>
+                  <h2 class="home-header01">Connecting Talent and Opportunity</h2>
                   <p class="home-description02">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliquat enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi
+                    SkillSync serves as a dynamic bridge connecting employers with skilled
+                    workers effortlessly. Discover the right talent seamlessly with the help of
+                    our user-friendly interface. 
                   </p>
                 </div>
                 <button class="home-learn1 button">
@@ -250,13 +228,13 @@
               <div class="home-main1">
                 <div class="home-content02">
                   <h2 class="home-header02">
-                    Create yourself for the metaverse
+                    Empowering Skilled Workers
                   </h2>
                   <p class="home-description03">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliquat enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi
+                    At SkillSync, we're on a mission to empower skilled workers in the  
+                    unorganized sector. Our platform connects them with meaningful job
+                    opportunities, creating a pathway to income stability and a thriving
+                    work environment.
                   </p>
                 </div>
                 <button class="home-learn2 button">
@@ -282,13 +260,12 @@
               <div class="home-main2">
                 <div class="home-content03">
                   <h2 class="home-header03">
-                    Create yourself for the metaverse
+                    Shaping the Future of Unorganized Sectors
                   </h2>
                   <p class="home-description04">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliquat enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi
+                    SkillSync envisions a future where the unorganized sector is 
+                    transformed. Beyond mere job matching, we aim to centralize and organize
+                    the sector, driving economic growth.
                   </p>
                 </div>
                 <button class="home-learn3 button">
@@ -309,16 +286,6 @@
           </div>
         </section>
         <section class="home-collection">
-          <div class="home-content04">
-            <span class="home-caption01">collection</span>
-            <div class="home-heading01">
-              <h2 class="home-header04">All time best collections</h2>
-              <p class="home-header05">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore.
-              </p>
-            </div>
-          </div>
           <div class="home-main3">
             <div class="home-card03">
               <div class="home-image06">
@@ -329,8 +296,8 @@
                 />
               </div>
               <div class="home-content05">
-                <span class="home-caption02">Character #1</span>
-                <h3 class="home-title">0.05 ETH</h3>
+                <span class="home-caption02">Mani</span>
+                <h3 class="home-title">Domestic helper</h3>
               </div>
             </div>
             <div class="home-card04">
@@ -342,8 +309,8 @@
                 />
               </div>
               <div class="home-content06">
-                <span class="home-caption03">Character #2</span>
-                <h3 class="home-title1">0.05 ETH</h3>
+                <span class="home-caption03">Kumar</span>
+                <h3 class="home-title1">Content writer</h3>
               </div>
             </div>
             <div class="home-card05">
@@ -355,8 +322,8 @@
                 />
               </div>
               <div class="home-content07">
-                <span class="home-caption04">Character #3</span>
-                <h3 class="home-title2">0.05 ETH</h3>
+                <span class="home-caption04">Dev</span>
+                <h3 class="home-title2">Freelance artisan</h3>
               </div>
             </div>
             <div class="home-card06">
@@ -369,10 +336,10 @@
               </div>
               <div class="home-content08">
                 <span class="home-caption05">
-                  <span>Character #4</span>
+                  <span>Naveen</span>
                   <br />
                 </span>
-                <h3 class="home-title3">0.05 ETH</h3>
+                <h3 class="home-title3">Delivery driver</h3>
               </div>
             </div>
             <div class="home-card07">
@@ -384,8 +351,8 @@
                 />
               </div>
               <div class="home-content09">
-                <span class="home-caption06">Character #5</span>
-                <h3 class="home-title4">0.05 ETH</h3>
+                <span class="home-caption06">Mahesh</span>
+                <h3 class="home-title4">Fitness trainer</h3>
               </div>
             </div>
             <div class="home-card08">
@@ -397,8 +364,8 @@
                 />
               </div>
               <div class="home-content10">
-                <span class="home-caption07">Character #6</span>
-                <h3 class="home-title5">0.05 ETH</h3>
+                <span class="home-caption07">Gopal</span>
+                <h3 class="home-title5">Electrician</h3>
               </div>
             </div>
             <div class="home-card09">
@@ -410,8 +377,8 @@
                 />
               </div>
               <div class="home-content11">
-                <span class="home-caption08">Character #7</span>
-                <h3 class="home-title6">0.05 ETH</h3>
+                <span class="home-caption08">Shashank</span>
+                <h3 class="home-title6">Pet Sitter</h3>
               </div>
             </div>
             <div class="home-card10">
@@ -423,104 +390,37 @@
                 />
               </div>
               <div class="home-content12">
-                <span class="home-caption09">Character #8</span>
-                <h3 class="home-title7">0.05 ETH</h3>
+                <span class="home-caption09">Sarvesh</span>
+                <h3 class="home-title7">Car Washer</h3>
               </div>
-            </div>
-          </div>
-          <button class="home-view2 button-link button">View all</button>
-        </section>
-        <section class="home-project">
-          <div class="home-understand">
-            <div class="home-content13">
-              <span class="home-caption10">Project</span>
-              <div class="home-heading02">
-                <h2 class="home-header06">Understand the project</h2>
-                <p class="home-header07">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
-              <button class="home-view3 button-link button">
-                <span>Learn More</span>
-                <img
-                  alt="image"
-                  src="../public/Icons/arrow.svg"
-                  class="home-image22"
-                />
-              </button>
-            </div>
-            <img
-              alt="image"
-              src="../public/group%202415.svg"
-              class="home-image23"
-            />
-          </div>
-          <div class="home-mining">
-            <img
-              alt="image"
-              src="../public/group%202422.svg"
-              class="home-image24"
-            />
-            <div class="home-content14">
-              <span class="home-caption11">Project</span>
-              <div class="home-heading03">
-                <h2 class="home-header08">How the minting works</h2>
-                <p class="home-header09">
-                  <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </span>
-                  <br />
-                  <br />
-                  <span>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </span>
-                  <br />
-                </p>
-              </div>
-              <button class="home-view4 button-link button">
-                <span>Learn More</span>
-                <img
-                  alt="image"
-                  src="../public/Icons/arrow.svg"
-                  class="home-image25"
-                />
-              </button>
             </div>
           </div>
         </section>
-        <section class="home-roadmap">
+        <section class="home-roadmap" id="feature-section">
           <div class="home-heading04">
-            <h2 class="home-header10">Roadmap</h2>
+            <h2 class="home-header10">Features</h2>
             <p class="home-header11">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore
+              Explore the Distinctive Features That Set Us Apart and
+              help you find the work you need
             </p>
           </div>
           <div class="home-list">
             <div class="home-step">
               <span class="home-caption12">01</span>
               <div class="home-heading05">
-                <h2 class="home-header12">Project Launch</h2>
+                <h2 class="home-header12">Location-Based Shortlisting</h2>
                 <p class="home-header13">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  SkillSync integrates a sophisticated location-based shortlisting
+                  feature. enabling employers and employees to efficiently narrow down
+                  their choices based on geographic proximity. thereby optimizing the
+                  hiring process.
                 </p>
               </div>
-              <button class="home-button6 button">View on Opensea</button>
             </div>
             <div class="home-step1">
               <span class="home-caption13">02</span>
               <div class="home-heading06">
-                <h2 class="home-header14">Metadata and Character</h2>
+                <h2 class="home-header14">Registration via QR Codes</h2>
                 <p class="home-header15">
                   <span>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -982,6 +882,14 @@
         </div>
       </div>
     </div>
+    <script>
+      function scrollToSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    </script>
     <script
       data-section-id="navbar"
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
