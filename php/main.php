@@ -67,28 +67,11 @@
             >
               <button class="home-button button-clean button" onclick="scrollToSection('about-section')">About</button>
               <button class="home-button1 button-clean button" onclick="scrollToSection('feature-section')">Features</button>
-              <button class="home-button2 button-clean button">Pricing</button>
-              <button class="home-button3 button-clean button">Team</button>
-              <button class="home-button4 button-clean button">Blog</button>
+              <button class="home-button2 button-clean button" onclick="scrollToSection('FAQ-section')">FAQ</button>
             </nav>
           </div>
           <div data-thq="thq-navbar-btn-group" class="home-btn-group">
-            <div class="home-socials">
-              <button class="social button">
-                <img
-                  alt="image"
-                  src="../public/Icons/twitter.svg"
-                  class="home-image"
-                />
-              </button>
-              <button class="social button">
-                <img
-                  alt="image"
-                  src="../public/Icons/discord.svg"
-                  class="home-image01"
-                />
-              </button>
-            </div>
+            <a href="base-login.php" class="home-view button">Register</a>
             <a href="base-login.php" class="home-view button">Login</a>
           </div>
           <div data-thq="thq-burger-menu" class="home-burger-menu">
@@ -107,7 +90,7 @@
               class="home-nav1"
             >
               <div class="home-container1">
-                <span class="home-logo1">Character</span>
+                <span class="home-logo1">SkillSync</span>
                 <div data-thq="thq-close-menu" class="home-menu-close">
                   <svg viewBox="0 0 1024 1024" class="home-icon02">
                     <path
@@ -123,10 +106,8 @@
                 class="home-nav2"
               >
                 <span class="home-text" onclick="scrollToSection('about-section')">About</span>
-                <span class="home-text01">Features</span>
-                <span class="home-text02">Pricing</span>
-                <span class="home-text03">Team</span>
-                <span class="home-text04">Blog</span>
+                <span class="home-text01" onclick="scrollToSection('features-section')">Features</span>
+                <span class="home-text02" onclick="scrollToSection('FAQ-section')">FAQ</span>
               </nav>
               <div class="home-container2">
               <a href="base-login.php" class="home-view button">Login</a>
@@ -423,74 +404,37 @@
                 <h2 class="home-header14">Registration via QR Codes</h2>
                 <p class="home-header15">
                   <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    SkillSync Incorporates QR codes to facilitate a direct and 
+                    efficient registration process for individuals interested in
+                    utilizing the platform, enhancing accessibility and simplifying
+                    the onboarding experience
                   </span>
-                  <br />
-                  <br />
-                  <span>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                  </span>
-                  <br />
                 </p>
               </div>
             </div>
             <div class="home-step2">
               <span class="home-caption14">03</span>
               <div class="home-heading07">
-                <h2 class="home-header16">Get Physical</h2>
+                <h2 class="home-header16">Flexible Work Options</h2>
                 <p class="home-header17">
                   <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    SkillSync Provides workers with the option to choose between
+                    working independently or through an intermediary, allowing for
+                    a versatile and adaptable work arrangement.
                   </span>
-                  <br />
-                  <br />
-                  <span>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                  </span>
-                  <br />
                 </p>
               </div>
             </div>
             <div class="home-step3">
               <span class="home-caption15">04</span>
               <div class="home-heading08">
-                <h2 class="home-header18">Private club community</h2>
+                <h2 class="home-header18">Specialized Module for Intermediaries</h2>
                 <p class="home-header19">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  SkillSync utilizes a dedicated module tailored for intermediaries,
+                  facilitating their engagement with the platform to connect individuals
+                  with job opportunities, especially in collaboration with
+                  non-governmental organizations (NGOs).
                 </p>
-                <div class="home-benefits">
-                  <div class="home-item">
-                    <img
-                      alt="image"
-                      src="../public/Icons/people.svg"
-                      class="home-image26"
-                    />
-                    <p class="home-header20">Consectetur adipiscing elit</p>
-                  </div>
-                  <div class="home-item1">
-                    <img
-                      alt="image"
-                      src="../public/Icons/paper.svg"
-                      class="home-image27"
-                    />
-                    <p class="home-header21">Consectetur adipiscing elit</p>
-                  </div>
-                  <div class="home-item2">
-                    <img
-                      alt="image"
-                      src="../public/Icons/checklist.svg"
-                      class="home-image28"
-                    />
-                    <p class="home-header22">Consectetur adipiscing elit</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -499,13 +443,12 @@
           <div class="home-content15">
             <div class="home-main4">
               <div class="home-heading09">
-                <h2 class="home-header23">Create your character now</h2>
+                <h2 class="home-header23">Register with SkillSync now</h2>
                 <p class="home-caption16">
-                  A character custom collection is joining the NFT space on
-                  Opensea.
+                  Unlock Opportunities: Register with SkillSync today!
                 </p>
               </div>
-              <button class="home-view5 button">View on Opensea</button>
+              <button class="home-view5 button">Sign up</button>
             </div>
             <img
               alt="image"
@@ -514,39 +457,20 @@
             />
           </div>
         </section>
-        <section class="home-faq">
+        <section class="home-faq" id="FAQ-section">
           <h2 class="home-header24">We have all the answers</h2>
           <div class="home-accordion">
             <div data-role="accordion-container" class="home-element accordion">
               <div class="home-content16">
-                <span class="home-header25">
-                  Lorem ipsum dolor sit ametetur elit?
+                <span class="home-header26">
+                  How does SkillSync support income stability for skilled workers?
                 </span>
                 <span data-role="accordion-content" class="home-description05">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo.
+                  SkillSync supports income stability by creating a centralized platform
+                  that connects skilled workers with job opportunities. This not only 
+                  ensures a steady flow of work for workers but also contributes to their
+                  overall economic well-being.
                 </span>
-              </div>
-              <div class="home-icon-container">
-                <svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-closed"
-                  class="home-icon10"
-                >
-                  <path
-                    d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
-                  ></path></svg
-                ><svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-open"
-                  class="home-icon12"
-                >
-                  <path
-                    d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
-                  ></path>
-                </svg>
               </div>
             </div>
             <div
@@ -555,34 +479,15 @@
             >
               <div class="home-content17">
                 <span class="home-header26">
-                  Excepteur sint occaecat cupidatat non sunt in culpa qui
-                  officia deserunt mollit anim id est laborum?
+                  How does SkillSync leverage location data for optimal connections?
                 </span>
                 <span data-role="accordion-content" class="home-description06">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo.
+                  SkillSync uses location data to ensure optimal connections between
+                  employers and employees. This data-driven approach enhances efficiency
+                  by facilitating matches that are not only suitable in terms of skills
+                  but also geographically convenient, optimizing productivity for both
+                  parties.
                 </span>
-              </div>
-              <div class="home-icon-container1">
-                <svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-closed"
-                  class="home-icon14"
-                >
-                  <path
-                    d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
-                  ></path></svg
-                ><svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-open"
-                  class="home-icon16"
-                >
-                  <path
-                    d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
-                  ></path>
-                </svg>
               </div>
             </div>
             <div
@@ -591,34 +496,14 @@
             >
               <div class="home-content18">
                 <span class="home-header27">
-                  Tempor incididunt ut labore et dolore magna aliquat enim ad
-                  minim?
+                  Can SkillSync be used by both independent workers and those seeking
+                  mediated work?
                 </span>
                 <span data-role="accordion-content" class="home-description07">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo.
+                  Yes, SkillSync is designed to cater to a diverse audience. It provides 
+                  flexibility for both independent workers and those seeking mediated work,
+                  offering a versatile platform that accommodates different work preferences.
                 </span>
-              </div>
-              <div class="home-icon-container2">
-                <svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-closed"
-                  class="home-icon18"
-                >
-                  <path
-                    d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
-                  ></path></svg
-                ><svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-open"
-                  class="home-icon20"
-                >
-                  <path
-                    d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
-                  ></path>
-                </svg>
               </div>
             </div>
             <div
@@ -627,33 +512,14 @@
             >
               <div class="home-content19">
                 <span class="home-header28">
-                  Lorem ipsum dolor sit ametetur elit?
+                  What features make SkillSync stand out in the market?
                 </span>
                 <span data-role="accordion-content" class="home-description08">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo.
+                  SkillSync stands out with features such as a location-based connection
+                  system, ensuring optimal matches between employers and workers. The platform
+                  also offers a versatile interface, making it easy for users to find ideal
+                  matches, fostering a dynamic and efficient ecosystem.
                 </span>
-              </div>
-              <div class="home-icon-container3">
-                <svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-closed"
-                  class="home-icon22"
-                >
-                  <path
-                    d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
-                  ></path></svg
-                ><svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-open"
-                  class="home-icon24"
-                >
-                  <path
-                    d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
-                  ></path>
-                </svg>
               </div>
             </div>
             <div
@@ -662,69 +528,17 @@
             >
               <div class="home-content20">
                 <span class="home-header29">
-                  Incididunt ut labore et dolore?
+                  How does SkillSync enhance the hiring process for employers and skilled
+                  workers?
                 </span>
                 <span data-role="accordion-content" class="home-description09">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo.
+                  SkillSync streamlines the hiring process by providing a user-friendly
+                  platform where employers can easily find and connect with skilled
+                  workers based on their specific needs. The platform's emphasis on
+                  collaboration and partnerships fosters a harmonized marketplace,
+                  promoting transparency and mutual benefit.
                 </span>
               </div>
-              <div class="home-icon-container4">
-                <svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-closed"
-                  class="home-icon26"
-                >
-                  <path
-                    d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
-                  ></path></svg
-                ><svg
-                  viewBox="0 0 1024 1024"
-                  data-role="accordion-icon-open"
-                  class="home-icon28"
-                >
-                  <path
-                    d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="home-get-yours">
-          <div class="home-row2">
-            <div class="home-column">
-              <div class="home-card11">
-                <img
-                  alt="image"
-                  src="../public/Characters/character-9.svg"
-                  class="home-image30"
-                />
-              </div>
-            </div>
-            <div class="home-column1">
-              <div class="home-card12">
-                <img
-                  alt="image"
-                  src="../public/Characters/character-10.svg"
-                  class="home-image31"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="home-column2">
-            <div class="home-card13">
-              <div class="home-content21">
-                <h2 class="home-header30">Get yours now</h2>
-                <p class="home-description10">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliquat
-                  enim ad minim veniam.
-                </p>
-              </div>
-              <button class="home-button7 button">View on Opensea</button>
             </div>
           </div>
         </section>
@@ -732,100 +546,28 @@
           <div class="home-main5">
             <div class="home-branding">
               <div class="home-heading10">
-                <h2 class="home-logo2">Character</h2>
+                <h2 class="home-logo2">Stay Connected with SkillSync</h2>
                 <p class="home-caption17">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore.
+                  Explore more opportunities, stay updated, and be part of the SkillSync
+                  community.
                 </p>
-              </div>
-              <div class="home-socials1">
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="home-twitter1 social button"
-                >
-                  <img
-                    alt="image"
-                    src="../public/Icons/twitter.svg"
-                    class="home-image32"
-                  />
-                </a>
-                <a
-                  href="https://discord.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="home-discord1 social button"
-                >
-                  <img
-                    alt="image"
-                    src="../public/Icons/discord.svg"
-                    class="home-image33"
-                  />
-                </a>
               </div>
             </div>
             <div class="home-links1">
               <div class="home-list1">
                 <h3 class="home-heading11">Site</h3>
                 <div class="home-items">
-                  <button class="home-link02 button-clean button">About</button>
-                  <button class="home-link03 button-clean button">
-                    Collection
-                  </button>
-                  <button class="home-link04 button-clean button">
-                    Roadmap
-                  </button>
-                  <button class="home-link05 button-clean button">
+                  <button class="home-link02 button-clean button" onclick="scrollToSection('about-section')">About</button>
+                  <button class="home-link03 button-clean button" onclick="scrollToSection('feature-section')">
                     Features
                   </button>
-                </div>
-              </div>
-              <div class="home-list2">
-                <h3 class="home-heading12">Company</h3>
-                <div class="home-items1">
-                  <button class="home-link06 button-clean button">Team</button>
-                  <button class="home-link07 button-clean button">Press</button>
-                  <button class="home-link08 button-clean button">Terms</button>
-                  <button class="home-link09 button-clean button">
-                    Limitations
-                  </button>
-                  <button class="home-link10 button-clean button">
-                    Licenses
+                  <button class="home-link04 button-clean button" onclick="scrollToSection('FAQ-section')">
+                    FAQ
                   </button>
                 </div>
               </div>
-            </div>
-            <div class="home-socials2">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="home-twitter2 social button"
-              >
-                <img
-                  alt="image"
-                  src="../public/Icons/twitter.svg"
-                  class="home-image34"
-                />
-              </a>
-              <a
-                href="https://discord.com"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="home-discord2 social button"
-              >
-                <img
-                  alt="image"
-                  src="../public/Icons/discord.svg"
-                  class="home-image35"
-                />
-              </a>
             </div>
           </div>
-          <span class="home-copyright">
-            © 2022 Character. All Rights Reserved.
-          </span>
         </footer>
         <div>
           <div class="home-container5">

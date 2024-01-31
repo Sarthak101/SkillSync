@@ -37,6 +37,7 @@
 
 .home-desktop-menu {
   display: flex;
+  margin-right: 10%;
 }
 .home-nav {
   gap: var(--dl-space-space-twounits);
@@ -53,12 +54,6 @@
   color: rgb(255, 255, 255);
 }
 .home-button2 {
-  color: rgb(255, 255, 255);
-}
-.home-button3 {
-  color: rgb(255, 255, 255);
-}
-.home-button4 {
   color: rgb(255, 255, 255);
 }
 .home-btn-group {
@@ -1391,13 +1386,6 @@
   max-width: 800px;
   align-items: flex-start;
   flex-direction: column;
-}
-.home-header25 {
-  color: rgb(255, 255, 255);
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 500;
-  padding-right: var(--dl-space-space-oneandhalfunits);
 }
 .home-description05 {
   color: rgb(255, 255, 255);
