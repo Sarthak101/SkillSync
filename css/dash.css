@@ -325,6 +325,7 @@ body.dark .switch::before {
     padding: 12px 60px;
 }
 
+
 .sidebar.close~.home {
     left: 78px;
     height: 100vh;
@@ -334,3 +335,6 @@ body.dark .switch::before {
 body.dark .home .text {
     color: var(--text-color);
 }
+
+
+
