@@ -6,7 +6,7 @@
         <meta hhtp-equiv = "X-UA-Compatible" content = "IE=edge">
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
         <title>Login</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../css/login.css">
     </head>
 
     <body>
