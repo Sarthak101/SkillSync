@@ -41,8 +41,6 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
-    <!--This is the head section-->
-    <!-- <style> ... </style> -->
   </head>
   <body>
     <link rel="stylesheet" href="../css/style.css" />
@@ -71,9 +69,11 @@
             </nav>
           </div>
           <div data-thq="thq-navbar-btn-group" class="home-btn-group">
-            <a href="base-login.php" class="home-view button">Register</a>
-            <a href="base-login.php" class="home-view button">Login</a>
+            <a href="#" class="home-view button">Register</a>
+            <a href="login.php" class="home-view button">Login</a>
           </div>
+
+          <!-- mobile menu button -->
           <div data-thq="thq-burger-menu" class="home-burger-menu">
             <button class="button home-button5">
               <svg viewBox="0 0 1024 1024" class="home-icon">
@@ -569,59 +569,6 @@
             </div>
           </div>
         </footer>
-        <div>
-          <div class="home-container5">
-            <script>
-              /*
-               Accordion - Code Embed
-               */
-               const accordionContainers = document.querySelectorAll('[data-role='accordion-container']'); // All accordion containers
-               const accordionContents = document.querySelectorAll('[data-role='accordion-content']'); // All accordion content
-               const accordionIconsClosed = document.querySelectorAll('[data-role='accordion-icon-closed']'); // All accordion closed icons
-               const accordionIconsOpen = document.querySelectorAll('[data-role='accordion-icon-open']'); // All accordion open icons
-
-               accordionContents.forEach((accordionContent) => {
-                   accordionContent.style.display = 'none'; //Hides all accordion contents
-               });
-
-               accordionIconsClosed.forEach((icon) => {
-                 icon.style.display = 'flex'
-               })
-
-               accordionIconsOpen.forEach((icon) => {
-                 icon.style.display = 'none'
-               })
-
-               accordionContainers.forEach((accordionContainer, index) => {
-                   accordionContainer.addEventListener('click', () => {
-                       if (accordionContents[index].style.display === 'flex') {
-                           // If the accordion is already open, close it
-                           accordionContents[index].style.display = 'none';
-                           accordionIconsClosed[index].style.display = 'flex';
-                           accordionIconsOpen[index].style.display = 'none'
-                       } else {
-                           // If the accordion is closed, open it
-                           accordionContents.forEach((accordionContent) => {
-                               accordionContent.style.display = 'none'; //Hides all accordion contents
-                           });
-
-                           accordionIconsClosed.forEach((accordionIcon) => {
-                               accordionIcon.style.display = 'flex'; // Resets all icon transforms to 0deg (default)
-                           });
-
-                           accordionIconsOpen.forEach((accordionIcon) => {
-                             accordionIcon.style.display = 'none';
-                           })
-
-                           accordionContents[index].style.display = 'flex'; // Shows accordion content
-                           accordionIconsClosed[index].style.display = 'none'; // Rotates accordion icon 180deg
-                           accordionIconsOpen[index].style.display = 'flex';
-                       }
-                   });
-               });
-            </script>
-          </div>
-        </div>
       </div>
     </div>
     <script>
@@ -632,6 +579,8 @@
         }
       }
     </script>
+
+    <!-- mobile navbar scripting -->
     <script
       data-section-id="navbar"
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
