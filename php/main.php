@@ -25,7 +25,6 @@
         line-height: 1.15;
         color: var(--dl-color-gray-black);
         background-color: var(--dl-color-gray-white);
-
       }
     </style>
     <link
@@ -69,8 +68,8 @@
             </nav>
           </div>
           <div data-thq="thq-navbar-btn-group" class="home-btn-group">
-            <a href="#" class="home-view button">Register</a>
-            <a href="login.php" class="home-view button">Login</a>
+            <!-- <a href="register-login.php" class="home-view button">Register</a> -->
+            <a href="register-login.php" class="home-view button">Login</a>
           </div>
 
           <!-- mobile menu button -->
@@ -448,7 +447,7 @@
                   Unlock Opportunities: Register with SkillSync today!
                 </p>
               </div>
-              <button class="home-view5 button">Sign up</button>
+              <a href="register-login.php"><button class="home-view5 button">Sign up</button></a>
             </div>
             <img
               alt="image"
