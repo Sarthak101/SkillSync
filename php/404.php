@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <title>404 - Not Found</title>
+    <link rel="icon" type="image/x-icon" href="../public/Icons/Bgtp.ico">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />

@@ -7,6 +7,8 @@
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
         <title>Login</title>
         <link rel="stylesheet" href="../css/login.css">
+        <link rel="icon" type="image/x-icon" href="../public/Icons/Bgtp.ico">
+
     </head>
 
     <body>

@@ -180,15 +180,6 @@ body.dark .sidebar header .toggle {
     transition: var(--tran-03);
 }
 
-.sidebar li:nth-child(1) {
-    background-color: var(--primary-color);
-    color: var(--sidebar-color);
-}
-
-.sidebar li:nth-child(1) .icon,
-.sidebar li:nth-child(1) .text {
-    color: var(--sidebar-color);
-}
 
 .sidebar li .tooltip {
     position: absolute;

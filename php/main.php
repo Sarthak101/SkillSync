@@ -27,6 +27,8 @@
         background-color: var(--dl-color-gray-white);
       }
     </style>
+        <link rel="icon" type="image/x-icon" href="../public/Icons/Bgtp.ico">
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/animate.css@4.1.1/animate.css"

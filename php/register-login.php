@@ -7,19 +7,27 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link rel="icon" type="image/x-icon" href="../public/Icons/Bgtp.ico">
+
     <link rel="stylesheet" href="../css/register-login.css" />
-    <title>Modern Login Page | AsmrProg</title>
+    <title>Registration / Login</title>
   </head>
 
   <body>
     <header>
+    <span class="home-logo">
+
+      <img src = "../public/Icons/logo.png" alt = "logo">
       <h2 class="skillsync">SkillSync</h2>
+
+</span>
+
     </header>
     <div class="container" id="container">
       <div class="form-container sign-up">
         <form>
           <h1>Create Account</h1>
-          <!-- <div class="social-icons">
+          <div class="social-icons">
             <a href="#" class="icon"
               ><i class="fa-brands fa-google-plus-g"></i
             ></a>
@@ -29,7 +37,7 @@
               ><i class="fa-brands fa-linkedin-in"></i
             ></a>
           </div>
-          <span>or use your email for registeration</span> -->
+          <span>or use your email for registeration</span>
           <input type="text" placeholder="First Name" />
           <input type="text" placeholder="last Name" />
           <input type="text" placeholder="Username" />
@@ -41,10 +49,10 @@
             </div>
             <div class="roles">
               <input type="radio" name="roles" value="Employer" />
-                <label for="employer">Employer</label>  
+                <label for="employer">Employer</label>  
               <input type="radio" name="roles" value="Employee" />  
               <label for="employee">Employee</label>
-                <input type="radio" name="roles" value="Mediator" />
+                <input type="radio" name="roles" value="Mediator" />
               <label for="mediator">Mediator</label>
             </div>
           </div>
