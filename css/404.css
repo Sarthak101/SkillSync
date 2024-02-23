@@ -8,6 +8,7 @@
   justify-content: center;
 }
 .not-found-container1 {
+  /* color: #fff; */
   display: flex;
   position: relative;
   align-items: center;
@@ -15,7 +16,7 @@
   justify-content: center;
 }
 .not-found-text1 {
-  color: rgb(38, 38, 38);
+  /* color: #fff; */
   font-size: 252px;
   margin-top: -20px;
   font-weight: 900;

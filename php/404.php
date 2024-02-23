@@ -24,8 +24,8 @@
         text-transform: none;
         letter-spacing: normal;
         line-height: 1.15;
-        color: var(--dl-color-gray-black);
-        background-color: var(--dl-color-gray-white);
+        color: #fff;
+        background-color: #333;
 
       }
     </style>
@@ -46,7 +46,7 @@
     <!-- <style> ... </style> -->
   </head>
   <body>
-    <link rel="stylesheet" href="../css/style.css" />
+    <!-- <link rel="stylesheet" href="../css/style.css" /> -->
     <div>
       <link href="../css/404.css" rel="stylesheet" />
 
