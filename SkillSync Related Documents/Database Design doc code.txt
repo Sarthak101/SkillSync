@@ -1,0 +1,77 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table Employee {
+    emp_id INT [PRIMARY KEY]
+    username VARCHAR
+    password VARCHAR
+    full_name VARCHAR
+    email VARCHAR
+    phone_no VARCHAR
+    address VARCHAR
+    pincode VARCHAR
+    med_Key INT
+    skills VARCHAR
+    description VARCHAR
+    jobs_done INT 
+    experience INT
+    img_id INT
+    isEngaged BOOLEAN
+    
+}
+
+Table Mediator  {
+  m_id INT [PRIMARY KEY]
+  username VARCHAR
+  password VARCHAR
+  full_name VARCHAR
+  email VARCHAR
+  phone_no VARCHAR
+  address VARCHAR
+  img_id INT
+}
+
+TABLE Customer {
+    cust_id INT [PRIMARY KEY]
+    username VARCHAR
+    password VARCHAR
+    full_name VARCHAR
+    email VARCHAR
+    phone_no VARCHAR
+    address VARCHAR
+    pincode VARCHAR
+    img_id INT
+}
+ 
+
+TABLE Service_Request {
+    sr_id INT [PRIMARY KEY]
+    cust_id INT
+    skills_req VARCHAR
+    pincode VARCHAR
+}
+
+ TABLE Image {
+    img_id INT [PRIMARY KEY] 
+    file_path VARCHAR
+    person_id INT
+}
+Ref: Employee.img_id - Image.img_id
+Ref: Employee.emp_id > Mediator.m_id
+
+Ref: Mediator.img_id - Image.img_id
+Ref: Customer.img_id - Image.img_id
+Ref: Customer.cust_id - Service_Request.sr_id
+Ref: Employee.emp_id - Service_Request.sr_id
+
+//    FOREIGN KEY (cust_id) REFERENCES Customer(cust_id)
+
+//FOREIGN KEY (img_id) REFERENCES Image(img_id)
+
+//FOREIGN KEY (med_Key) REFERENCES Mediator(m_id),
+//FOREIGN KEY (img_id) REFERENCES Image(img_id)
+//Ref: posts.user_id > users.id // many-to-one
+
+//Ref: users.id < follows.following_user_id
+
+//Ref: users.id < follows.followed_user_id

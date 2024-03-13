@@ -59,7 +59,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="settings.php">
+                        <a href="#" onclick="loadIframe('settings.php')">
                             <i class='bx bx-cog icon'></i>
                             <span class="text nav-text">Settings</span>
                         </a>
@@ -96,7 +96,6 @@
     </nav>
 
     <section class="home">
-        <div class="text">Dashboard Sidebar</div>
 
         <div id = "frame" ></div>
     </section>
@@ -123,16 +122,18 @@
 
             }
         });
+        loadIframe('dashboard.php'); //Default Loaded Dashboard
         function loadIframe(src) {
         removeIframe();
         var iframeContainer = document.getElementById('frame');
 
-        iframeContainer.innerHTML = '<iframe id="frame" src="' + src + '" width="1650" height="720" frameborder="0" style="outline: 5px solid #695CFE; margin-left: 3.12%; margin-top: 1%; "></iframe>';
+        iframeContainer.innerHTML = '<iframe id="framenew" src="' + src + '"width=100% frameborder="0"  "></iframe>';
     }
     
         function removeIframe() {
-        var iframeContainer = document.getElementById('frame');
-        iframeContainer.innerHTML = ''; // Remove the iframe by clearing the container
+            var iframeContainer = document.getElementById('frame');
+            iframeContainer.innerHTML = ''; // Remove the iframe by clearing the container
+
         }
     </script>
 

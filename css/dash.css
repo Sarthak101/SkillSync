@@ -25,6 +25,7 @@
 }
 
 body {
+    overflow-y: hidden;
     min-height: 100vh;
     background-color: var(--body-color);
     transition: var(--tran-05);
@@ -210,6 +211,21 @@ body.dark .sidebar header .toggle {
     background-color: var(--primary-color);
 }
 
+/* .frameflex{
+    display: flex;
+    outline: #18191a;
+} */
+
+#frame{
+    width: 100%;
+    display: flex;
+    outline: #707070;
+    height: 100vh;
+    padding-top: 1%; 
+    padding-left: 3%;
+    
+}
+
 .sidebar li a:hover .icon,
 .sidebar li a:hover .text {
     color: var(--sidebar-color);
@@ -307,6 +323,7 @@ body.dark .switch::before {
     width: calc(100% - 250px);
     background-color: var(--body-color);
     transition: var(--tran-05);
+
 }
 
 .home .text {
@@ -315,6 +332,13 @@ body.dark .switch::before {
     color: var(--text-color);
     padding: 12px 60px;
 }
+/* 
+.home .frameflex{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px 60px;
+    height: 100% ;
+} */
 
 
 .sidebar.close~.home {
