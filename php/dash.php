@@ -59,12 +59,21 @@
                     </li>
 
                     <li class="nav-link">
+                        <a href="#" onclick="loadIframe('earnings.php')">
+                            <i class='bx bx-dollar-circle icon'></i>
+                            <span class="text nav-text">Earnings</span>
+                        </a>
+                        <span class="tooltip">Earnings</span>
+                    </li>
+
+                    <li class="nav-link">
                         <a href="#" onclick="loadIframe('settings.php')">
                             <i class='bx bx-cog icon'></i>
                             <span class="text nav-text">Settings</span>
                         </a>
                         <span class="tooltip">Settings</span>
                     </li>
+
 
                 </ul>
             </div>
