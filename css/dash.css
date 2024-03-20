@@ -254,7 +254,7 @@ body.dark .sidebar li a:hover .text {
     position: relative;
     transition: var(--tran-05);
 }
-
+/* 
 .menu-bar .mode .sun-moon {
     height: 50px;
     width: 60px;
@@ -274,7 +274,7 @@ body.dark .mode .sun-moon i.sun {
 
 body.dark .mode .sun-moon i.moon {
     opacity: 0;
-}
+} */
 
 .menu-bar .bottom-content .toggle-switch {
     position: absolute;

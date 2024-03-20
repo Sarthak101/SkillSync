@@ -80,7 +80,7 @@
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="base-login.php">
+                    <a href="register-login.php">
                         <i class='bx bx-log-out icon'></i>
                         <span class="text nav-text">Logout</span>
                     </a>
@@ -88,11 +88,11 @@
                 </li>
 
                 <li class="mode">
-                    <div class="sun-moon">
+                    <!-- <div class="sun-moon">
                         <i class='bx bx-moon icon moon'></i>
                         <i class='bx bx-sun icon sun'></i>
                     </div>
-                    <span class="mode-text text">Dark mode</span>
+                    <span class="mode-text text">Dark mode</span> -->
 
                     <div class="toggle-switch">
                         <span class="switch"></span>
