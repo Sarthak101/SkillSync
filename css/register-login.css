@@ -14,12 +14,12 @@
 
   .home-logo img {
     border-radius: 50%;
-    margin-right: 10px; /* Adjust the margin as needed */
+    margin-right: 10px;
     width: 25%;
   }
 
   .skillsync {
-    margin: 0; /* Remove default margin from h2 */
+    margin: 0;
   }
   
 body{

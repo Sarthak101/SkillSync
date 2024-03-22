@@ -20,14 +20,14 @@
       <img src = "../public/Icons/logo.png" alt = "logo">
       <h2 class="skillsync">SkillSync</h2>
 
-</span>
-
     </header>
     <div class="container" id="container">
       <div class="form-container sign-up">
-        <form>
+        <form action="config.php" method="post">
+          <input type="hidden" name="action" value="signUp">
           <h1>Create Account</h1>
-          <div class="social-icons">
+          <br>
+          <!-- <div class="social-icons">
             <a href="#" class="icon"
               ><i class="fa-brands fa-google-plus-g"></i
             ></a>
@@ -36,34 +36,35 @@
             <a href="#" class="icon"
               ><i class="fa-brands fa-linkedin-in"></i
             ></a>
-          </div>
-          <span>or use your email for registeration</span>
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="last Name" />
-          <input type="text" placeholder="Username" />
-          <input type="number" placeholder="Phone number    " />
-          <input type="email" placeholder="Email" />
+          </div> -->
+          <!-- <span>or use your email for registeration</span> -->
+          <input type="text" placeholder="First Name" name="firstName" required/>
+          <input type="text" placeholder="last Name" name="lastName" required/>
+          <input type="text" placeholder="Username" name="username" required/>
+          <input type="number" placeholder="Phone number" name="phoneNumber" required/>
+          <input type="email" placeholder="Email" name="user_email" required/>
+          <input type="password" placeholder="Password" name="pass1" required/>
+          <input type="password" placeholder="Confirm Password" name="pass2" required/>
+          <br>
           <div class="rolesarea">
             <div class="roletext">
               <h4>Role :</h4>
             </div>
             <div class="roles">
-              <input type="radio" name="roles" value="Employer" />
-                <label for="employer">Employer</label>  
-              <input type="radio" name="roles" value="Employee" />  
+              <input type="radio" name="roles" value="Employer" required>
+                <label for="employer">Employer</label>
+              <input type="radio" name="roles" value="Employee" required>
               <label for="employee">Employee</label>
-                <input type="radio" name="roles" value="Mediator" />
-              <label for="mediator">Mediator</label>
+                <!-- <input type="radio" name="roles" value="Mediator" />
+              <label for="mediator">Mediator</label> -->
             </div>
           </div>
-
-          <input type="password" placeholder="Password" />
-          <input type="password" placeholder="Confirm   Password" />
           <button>Sign Up</button>
         </form>
       </div>
       <div class="form-container sign-in">
-        <form>
+        <form action="config.php" method="post">
+          <input type="hidden" name="action" value="signIn">
           <h1>Sign In</h1>
           <!-- <div class="social-icons">
             <a href="#" class="icon"
@@ -76,8 +77,8 @@
             ></a>
           </div> -->
           <!-- <span>or use your email password</span> -->
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <input type="email" placeholder="Email" name="email" />
+          <input type="password" placeholder="Password" name="password" />
           <a href="#">Forget Your Password?</a>
           <button>Sign In</button>
         </form>
