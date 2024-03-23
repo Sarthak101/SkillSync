@@ -1,18 +1,17 @@
 <?php
+session_start();
+
 $host = "localhost"; // Database host
-$username = "root"; // Database username
-$password = ""; // Database password
+$dbusername = "root"; // Database username
+$dbpassword = ""; // Database password
 $database = "skillsync"; // Database name
 
 //connecting to the database using mysql injection
-$conn = new mysqli($host, $username, $password, $database);
+$conn = new mysqli($host, $dbusername, $dbpassword, $database);
 
-// if ($conn->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
-// }
-// else {
-//     echo "Connected to $database";
-// }
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 function onRegister($conn, $firstName, $lastName, $username, $phoneNo, $email, $password, $role)
 {
@@ -23,9 +22,16 @@ function onRegister($conn, $firstName, $lastName, $username, $phoneNo, $email, $
         // if registration is successful
         if(mysqli_affected_rows($conn) > 0)
         {
+            // php code to get user id of newly registered user
+            $get_UID_Query = "SELECT userid from users where username = '$username' and email='$email'";
+            $result = $conn->query($get_UID_Query);
+            $row = $result->fetch_assoc();
+            $user_id = $row['userid'];
+            $_SESSION['user_id'] = $user_id;
+
             if($role == 'Employee')
             {
-                header('Location: dash.php');
+                header('Location: Employee/dash.php');
                 exit();
             }
             elseif($role == 'Employer')
@@ -47,6 +53,13 @@ function onSignIn($conn, $email, $password)
     }
     else
     {
+        // php code to get user id of user signing in
+        $get_UID_Query = "SELECT userid from users where email = '$email' and password='$password'";
+        $result = $conn->query($get_UID_Query);
+        $row = $result->fetch_assoc();
+        $user_id = $row['userid'];
+        $_SESSION['user_id'] = $user_id;
+        
         $findRole = $conn->query("SELECT role from users WHERE email ='$email' AND password = '$password' ")->fetch_assoc();
         $role = $findRole['role'];
         
@@ -57,7 +70,7 @@ function onSignIn($conn, $email, $password)
         }
         elseif($role == 'Employee')
         {
-            header('Location: dash.php');
+            header('Location: Employee/dash.php');
             exit();
         }
     }

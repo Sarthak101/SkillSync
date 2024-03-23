@@ -2,12 +2,12 @@
 <html>
 <body>
 
-<link rel="stylesheet" href="../css/requests.css">
+<link rel="stylesheet" href="../../css/requests.css">
 <h1>Requests</h1>
 
 <!-- FIRST REQUEST -->
 <div class="job-box active">
-    <img src="../public/Icons/Profile.jpg" alt="Job Image">
+    <img src="../../public/Icons/Profile.jpg" alt="Job Image">
     <div class="job-details">
         <div class="text-content">
             <h2>Job 1</h2>
@@ -26,7 +26,7 @@
 
 <!-- Second REQUEST -->
 <div class="job-box active">
-    <img src="../public/Icons/Profile.jpg" alt="Job Image">
+    <img src="../../public/Icons/Profile.jpg" alt="Job Image">
     <div class="job-details">
         <div class="text-content">
             <h2>Job 2</h2>

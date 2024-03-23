@@ -1,3 +1,7 @@
+<?php
+    include('../UserInfo/userinfo.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +20,7 @@
         <img src = "../../public/Icons/Profile.jpg" alt = "logo">
         <div class="text-container">
             </div>
-            <h2>Name</h2>
+            <h2>Welcome: <?php echo $name; ?></h2>
             <hr class= "new4"></hr>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui rem maxime id adipisci ipsum corporis illum eaque soluta nihil doloribus ut sapiente dolor suscipit, voluptatem ipsa alias recusandae perferendis corrupti.</p>
         </div>

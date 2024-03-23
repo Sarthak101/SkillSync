@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="../css/jobs.css" />
+<link rel="stylesheet" href="../../css/jobs.css" />
 
     <header>Testing</header>
 <body>

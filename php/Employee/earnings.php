@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/earnings.css">
+  <link rel="stylesheet" href="../../css/earnings.css">
 
   <title>Employee Dashboard</title>
   <!-- You can link your CSS stylesheet here if you have one -->
