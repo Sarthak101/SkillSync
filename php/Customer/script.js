@@ -31,8 +31,21 @@ function selectLocation() {
     // Close the modal
     closeModal();
 
-    // Update the location input box
-    document.getElementById('location-input').value = selectedLocation.lng + ', ' + selectedLocation.lat;
+    // Update the location input box with a human-readable address
+    // Using reverse geocoding with Mapbox Geocoding API
+    fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${selectedLocation.lng},${selectedLocation.lat}.json?types=address&access_token=${mapboxgl.accessToken}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.features.length > 0) {
+                const locationName = data.features[0].place_name;
+                document.getElementById('location-input').value = locationName;
+            } else {
+                document.getElementById('location-input').value = "Unknown Location";
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching location:', error);
+        });
 
     // Call your API to get job details based on the selected location
     // Here we are simulating some job data
@@ -78,18 +91,53 @@ var modalMap = new mapboxgl.Map({
     attributionControl: false
 });
 
-// When the modal map is clicked, add a marker
-modalMap.on('click', function(e) {
-    var marker;
-    if (marker) {
-        marker.remove();
-    }
-    marker = new mapboxgl.Marker()
-        .setLngLat(e.lngLat)
-        .addTo(modalMap);
-});
-
 // Function to resize the modal map on modal open
 function resizeModalMap() {
     modalMap.resize();
+}
+
+// // When the modal map is clicked, update the selected-location input box
+// modalMap.on('click', function(e) {
+//     var clickedLocation = e.lngLat;
+
+//     fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${clickedLocation.lng},${clickedLocation.lat}.json?types=address&access_token=${mapboxgl.accessToken}`)
+//         .then(response => response.json())
+//         .then(data => {
+//             if (data.features.length > 0) {
+//                 const locationName = data.features[0].place_name;
+//                 document.getElementById('selected-location').value = locationName;
+//             } else {
+//                 document.getElementById('selected-location').value = "Unknown Location";
+//             }
+//         })
+//         .catch(error => {
+//             console.error('Error fetching location:', error);
+//         });
+// });
+
+
+// Assuming you have already initialized your map as 'map'
+
+// Add a click event listener to the map
+modalMap.on('click', function(e) {
+    // 'e' is the event object, and e.lngLat is the clicked coordinates
+    var clickedLocation = e.lngLat;
+    
+    // You can now use 'clickedLocation' to perform further actions, such as displaying it in an input box, etc.
+    console.log('Selected Location:', clickedLocation);
+    
+    // You can also perform other actions like updating an input box with the clicked location
+    updateInputBox(clickedLocation);
+});
+
+// Function to update an input box with the clicked location
+function updateInputBox(location) {
+    // Assuming you have an input box with the id 'selected-location'
+    var inputBox = document.getElementById('selected-location');
+    
+    // Check if the input box exists
+    if (inputBox) {
+        // Update the input box value with the clicked location
+        inputBox.value = JSON.stringify(location);
+    }
 }
