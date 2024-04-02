@@ -135,10 +135,13 @@
         <section class="home-hero">
           <div class="home-heading">
             <h1 class="home-header">Find work that works for you.</h1>
+            
             <p class="home-caption">
               Generating job opportunities and ensuring income stability for workers.
             </p>
           </div>
+          <!-- integrating registration in main page -->
+          <?php include('userRegistration.php') ?>
         </section>
         <section class="home-description">
           <img
