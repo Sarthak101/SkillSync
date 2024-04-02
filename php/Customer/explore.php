@@ -48,10 +48,17 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
+            <!-- Add the input box for selected location -->
+            <input id="selected-location" type="text" placeholder="Selected Location" readonly onfocus="handleInputFocus()">
             <div id="map" class="map-container"></div>
             <button onclick="selectLocation()">Select This Location</button>
         </div>
     </div>
+
+    <!-- Button to open the modal
+    <button onclick="openModal()">Open Modal</button> -->
+
+
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
     <script src="script.js"></script>
