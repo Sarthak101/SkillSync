@@ -64,7 +64,7 @@ fi-color:hover {
   margin-top: 50px;
 }
 
-/* Setting Margin and Alignment for Welcome to OSM Mobile View */
+/* Setting Margin and Alignment for Welcome to Mobile View */
 @media only screen and (max-width: 600px) {
   .myclass {
     margin-top: 350px;
@@ -80,4 +80,3 @@ h2{
   color: black; /* Set the text color to black */
   /* Additional styling can be added here */
 }
-
