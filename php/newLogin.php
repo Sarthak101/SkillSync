@@ -12,7 +12,7 @@ if(!isset($_SESSION['is_login'])){
       $_SESSION['is_login'] = true;
       $_SESSION['rEmail'] = $rEmail;
       // Redirecting to RequesterProfile page on Correct Email and Pass
-      echo "<script> location.href='RequesterProfile.php'; </script>";
+      echo "<script> location.href='Customer\dashCustomer.php'; </script>";
       exit;
     } else {
       $msg = '<div class="alert alert-warning mt-2" role="alert"> Enter Valid Email and Password </div>';
