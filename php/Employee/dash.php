@@ -80,7 +80,7 @@
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="register-login.php">
+                    <a href="../logout.php">
                         <i class='bx bx-log-out icon'></i>
                         <span class="text nav-text">Logout</span>
                     </a>

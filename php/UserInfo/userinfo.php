@@ -1,5 +1,5 @@
 <?php
-    include ('../config.php');
+    include ('../dbConnection.php');
     $u_id = $_SESSION['user_id']; //gets the user_id of the user logged in
     
     // Get User info from users table

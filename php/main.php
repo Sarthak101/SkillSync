@@ -70,7 +70,7 @@
             </nav>
           </div>
           <div data-thq="thq-navbar-btn-group" class="home-btn-group">
-            <!-- <a href="register-login.php" class="home-view button">Register</a> -->
+            <a href="EmployeeLogin.php" class="home-view button">Work With us</a>
             <a href="newLogin.php" class="home-view button">Login</a>
           </div>
 
