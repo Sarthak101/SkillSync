@@ -81,3 +81,12 @@ h2{
   /* Additional styling can be added here */
 }
 
+
+ 
+.roles label {
+  margin-top: 2.2 px; /* Adjust as needed */
+  color: #fff;
+  /* margin-left: 50% auto; */
+  justify-content: space-between;
+  margin-bottom: 20px;
+}

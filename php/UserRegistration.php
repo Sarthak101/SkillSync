@@ -61,9 +61,19 @@
           <small class="form-text">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
-          <i class="fas fa-key" style="color: white;"></i><label for="pass" class="pl-2 font-weight-bold text-white">New
-            Password</label><input type="password" class="form-control" placeholder="Password" name="rPassword">
+          <i class="fas fa-key" style="color: white;"></i><label for="pass" class="pl-2 font-weight-bold text-white">Password</label>
+          <input type="password" class="form-control" placeholder="Password" name="rPassword">
         </div>
+        <div class="roles">
+          <br>
+        <i style="color: white;"></i><label for="pass" class="pl-2 font-weight-bold text-white">Roles</label><br>
+              <input type="radio" name="roles" value="Employer" required>
+                <label for="employer">Employer</label>
+              <input type="radio" name="roles" value="Employee" required>
+              <label for="employee">Employee</label>
+              <input type="radio" name="roles" value="Mediator" />
+              <label for="mediator">Mediator</label>
+          </div>
         <button type="submit" class="btn btn-custom-yellow mt-5 btn-block shadow-sm font-weight-bold" name="rSignup">Sign Up</button>
         <!-- <button type="submit" class="btn btn-danger mt-5 btn-block shadow-sm font-weight-bold" name="rSignup">Sign Up</button> -->
         <em style="font-size:10px;">Note - By clicking Sign Up, you agree to our Terms, Data
