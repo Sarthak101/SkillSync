@@ -12,14 +12,14 @@ if(!isset($_SESSION['is_login'])){
       $_SESSION['is_login'] = true;
       $_SESSION['rEmail'] = $rEmail;
       // Redirecting to RequesterProfile page on Correct Email and Pass
-      echo "<script> location.href='Customer/dashCustomer.php'; </script>";
+      echo "<script> location.href='Customer/cust_explore.php'; </script>";
       exit;
     } else {
       $msg = '<div class="alert alert-warning mt-2" role="alert"> Enter Valid Email and Password </div>';
     }
   }
 } else {
-  echo "<script> location.href='Customer/dashCustomer.php'; </script>";
+  echo "<script> location.href='Customer/cust_explore.php'; </script>";
 }
 
 ?>
@@ -74,7 +74,7 @@ if(!isset($_SESSION['is_login'])){
           <button type="submit" class="btn btn-custom-yellow mt-5 btn-block shadow-sm font-weight-bold">Login</button>
           <?php if(isset($msg)) {echo $msg; } ?>
         </form>
-        <div class="text-center"><a class="btn btn-info mt-3 shadow-sm font-weight-bold" href="../index.php">Back
+        <div class="text-center"><a class="btn btn-info mt-3 shadow-sm font-weight-bold" href="main.php">Back
             to Home</a></div>
       </div>
     </div>
@@ -88,4 +88,3 @@ if(!isset($_SESSION['is_login'])){
 </body>
 
 </html>
-
