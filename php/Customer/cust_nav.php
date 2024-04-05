@@ -1,9 +1,20 @@
+
 <?php
 session_start();
+
+// Check if user is not logged in, redirect to newLogin.php
+if(!isset($_SESSION['is_login'])){
+    header("Location: ../newLogin.php");
+    exit; // Ensure that script stops here to prevent further execution
+}
+
+// Proceed with displaying the page if user is logged in
 if(isset($_SESSION['is_login'])){
     $username = $_SESSION['rEmail'];
 }
-?><!DOCTYPE html>
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
