@@ -1,5 +1,8 @@
 <?php
     include ('userinfo.php'); 
+    $postQuery = "SELECT * from posts_tb where emp_id = '$e_id'";
+    $result = $conn->query($postQuery);
+    $postings = $result->fetch_all(MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -13,12 +16,16 @@
 
     <style>
     .container{
-        max-width: 1200px;
         margin: 20px auto;
         padding: 20px;
+        margin-right: 10px;
         background-color: #FFFFFF;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
     }
 
     .post-list {
@@ -31,9 +38,7 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 10px;
-        padding: 10px;
-        border: 1px solid #CCCCCC;
-        border-radius: 5px;
+        padding: 5px;
     }
 
     .post-info {
@@ -47,7 +52,8 @@
     }
 
     .delete-btn {
-        padding: 5px 10px;
+        padding: 15px 15px;
+        margin-bottom: 5px;
         background-color: #FF6347; /* Red color for delete button */
         color: #FFFFFF;
         border: none;
@@ -60,7 +66,6 @@
         background-color: #D32F2F; /* Darker red color on hover */
     }
 </style>
-
 </head>
 <body>
 
@@ -77,20 +82,50 @@
 
     <!-- Line to divide -->
     <hr class= "new5"></hr>
-    <div class="container">
-        <div class="post-list">
-            <div class="post-item">
-                <div class="post-info">
-                    <p class="post-id">Post ID: 1</p>
-                    <p class="job-title">Job Title: Example Job</p>
-                    <p class="price">Price: $100</p>
+    <h2>Job Listings</h2>
+    <?php foreach ($postings as $posts): ?>
+        <div class="container">
+            <div class="post-list">
+                <div class="post-item">
+                    <div class="post-info">
+                        <p class="post-id">Post ID: <?php echo $posts['post_id']; ?></p>
+                        <p class="job-title">Job Title: <?php echo $posts['job_title']; ?></p>
+                        <p class="price">Price: <?php echo $posts['price']; ?></p>
+                    </div>
+                    <button class="delete-btn" data-post-id="<?php echo $post['delete_post_id']; ?>">Delete</button>
                 </div>
-                <button class="delete-btn">Delete</button>
+                <!-- Add more post items here if needed -->
             </div>
-            <!-- Add more post items here if needed -->
         </div>
-    </div>
+    <?php endforeach ?>
 
+    <script>
+    const deleteButtons = document.querySelectorAll('.delete-button');
+
+    deleteButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        const postId = e.target.dataset.postId;
+        const formData = new FormData();
+        formData.append('delete_post_id', postId);
+
+        fetch('delete_post.php', {
+        method: 'POST',
+        body: formData,
+        })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            location.reload();
+        } else {
+            console.error('Error deleting post:', data.message);
+        }
+        })
+    .catch((error) => {
+        console.error('Error deleting post:', error);
+        });
+    });
+    });
+</script>
 
 </body>
 </html>
