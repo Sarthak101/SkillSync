@@ -3,19 +3,52 @@ include('dbConnection.php');
 session_start();
 if(!isset($_SESSION['is_login'])){
   if(isset($_REQUEST['rEmail'])){
+    $role = $_REQUEST['roles'];
     $rEmail = mysqli_real_escape_string($conn,trim($_REQUEST['rEmail']));
     $rPassword = mysqli_real_escape_string($conn,trim($_REQUEST['rPassword']));
-    $sql = "SELECT r_email, r_password FROM requesterlogin_tb WHERE r_email='".$rEmail."' AND r_password='".$rPassword."' limit 1";
-    $result = $conn->query($sql);
-    if($result->num_rows == 1){
-      
-      $_SESSION['is_login'] = true;
-      $_SESSION['rEmail'] = $rEmail;
-      // Redirecting to RequesterProfile page on Correct Email and Pass
-      echo "<script> location.href='Customer/cust_explore.php'; </script>";
-      exit;
-    } else {
+    if($role == "Employer")
+    {
+      $sql = "SELECT r_email, r_password FROM requesterlogin_tb WHERE r_email='".$rEmail."' AND r_password='".$rPassword."' limit 1";
+      $result = $conn->query($sql);
+      if($result->num_rows == 1){
+        $_SESSION['is_login'] = true;
+        $_SESSION['rEmail'] = $rEmail;
+        // Redirecting to RequesterProfile page on Correct Email and Pass
+        echo "<script> location.href='Customer/cust_explore.php'; </script>";
+        exit;
+      } else {
       $msg = '<div class="alert alert-warning mt-2" role="alert"> Enter Valid Email and Password </div>';
+      }
+    }
+    elseif($role == "Employee")
+    {
+      $sql = "SELECT empid, empEmail, empPassword FROM technician_tb WHERE empEmail='".$rEmail."' AND empPassword='".$rPassword."' limit 1";
+      $result = $conn->query($sql);
+      if($result->num_rows == 1){
+        $row = $result->fetch_assoc();
+        $_SESSION['rId'] = $row["empid"];
+        $_SESSION['is_login'] = true;
+        $_SESSION['rEmail'] = $rEmail;
+        // Redirecting to RequesterProfile page on Correct Email and Pass
+        echo "<script> location.href='Employee/dash.php'; </script>";
+        exit;
+      } else {
+      $msg = '<div class="alert alert-warning mt-2" role="alert"> Enter Valid Email and Password </div>';
+      }
+    }
+    else
+    {
+      $sql = "SELECT a_email, a_password FROM adminlogin_tb WHERE a_email='".$rEmail."' AND a_password='".$rPassword."' limit 1";
+      $result = $conn->query($sql);
+      if($result->num_rows == 1){
+        $_SESSION['is_login'] = true;
+        $_SESSION['rEmail'] = $rEmail;
+        // Redirecting to RequesterProfile page on Correct Email and Pass
+        echo "<script> location.href='NGO/dashboard.php'; </script>";
+        exit;
+      } else {
+      $msg = '<div class="alert alert-warning mt-2" role="alert"> Enter Valid Email and Password </div>';
+      }
     }
   }
 } else {
@@ -70,6 +103,16 @@ if(!isset($_SESSION['is_login'])){
           <div class="form-group">
             <i class="fas fa-key"></i><label for="pass" class="pl-2 font-weight-bold">Password</label><input type="password"
               class="form-control" placeholder="Password" name="rPassword">
+          </div>
+          <div class="roles">
+          <br>
+          <label for="pass" style="color: black;">Roles</label><br>
+              <input type="radio" name="roles" value="Employer" required>
+              <label for="employer" style="color: black;">Employer</label>
+              <input type="radio" name="roles" value="Employee" required>
+              <label for="employee" style="color: black;">Employee</label>
+              <input type="radio" name="roles" value="Mediator" required>
+              <label for="mediator" style="color: black;">Mediator</label>
           </div>
           <button type="submit" class="btn btn-custom-yellow mt-5 btn-block shadow-sm font-weight-bold">Login</button>
           <?php if(isset($msg)) {echo $msg; } ?>

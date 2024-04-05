@@ -53,9 +53,9 @@
                     <li class="nav-link">
                         <a href="#" onclick="loadIframe('RequestPosting.php')">
                             <i class='bx bx-chat icon'></i>
-                            <span class="text nav-text">Requests</span>
+                            <span class="text nav-text">Job Posting</span>
                         </a>
-                        <span class="tooltip">Requests</span>
+                        <span class="tooltip">Job Posting</span>
                     </li>
 
                     <li class="nav-link">

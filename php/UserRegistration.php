@@ -23,7 +23,7 @@
 
   if(isset($_REQUEST['rSignup'])){
     // Checking for Empty Fields
-    if(($_REQUEST['rName'] == "") || ($_REQUEST['rEmail'] == "") || ($_REQUEST['rPassword'] == "")){
+    if(($_REQUEST['rName'] == "") || ($_REQUEST['rEmail'] == "") || ($_REQUEST['rPassword'] == "") || $_REQUEST['roles'] == ""){
       $regmsg = '<div class="alert alert-warning mt-2" role="alert"> All Fields are Required </div>';
     } else {
       $sql = "SELECT r_email FROM requesterlogin_tb WHERE r_email='".$_REQUEST['rEmail']."'";
@@ -32,14 +32,37 @@
         $regmsg = '<div class="alert alert-warning mt-2" role="alert"> Email ID Already Registered </div>';
       } else {
         // Assigning User Values to Variable
+        $role = $_REQUEST['roles'];
         $rName = $_REQUEST['rName'];
         $rEmail = $_REQUEST['rEmail'];
         $rPassword = $_REQUEST['rPassword'];
-        $sql = "INSERT INTO requesterlogin_tb(r_name, r_email, r_password) VALUES ('$rName','$rEmail', '$rPassword')";
-        if($conn->query($sql) == TRUE){
-          $regmsg = '<div class="alert alert-success mt-2" role="alert"> Account Succefully Created </div>';
-        } else {
-          $regmsg = '<div class="alert alert-danger mt-2" role="alert"> Unable to Create Account </div>';
+
+        if($role == "Employer")
+        {
+          $sql = "INSERT INTO requesterlogin_tb(r_name, r_email, r_password) VALUES ('$rName','$rEmail', '$rPassword')";
+          if($conn->query($sql) == TRUE){
+            $regmsg = '<div class="alert alert-success mt-2" role="alert"> Account Succefully Created </div>';
+          } else {
+            $regmsg = '<div class="alert alert-danger mt-2" role="alert"> Unable to Create Account </div>';
+          }
+        }
+        elseif($role == "Employee")
+        {
+          $sql = "INSERT INTO technician_tb(empName, empEmail, empPassword) VALUES ('$rName','$rEmail', '$rPassword')";
+          if($conn->query($sql) == TRUE){
+            $regmsg = '<div class="alert alert-success mt-2" role="alert"> Account Succefully Created </div>';
+          } else {
+            $regmsg = '<div class="alert alert-danger mt-2" role="alert"> Unable to Create Account </div>';
+          }
+        }
+        else
+        {
+          $sql = "INSERT INTO adminlogin_tb(a_name, a_email, a_password) VALUES ('$rName','$rEmail', '$rPassword')";
+          if($conn->query($sql) == TRUE){
+            $regmsg = '<div class="alert alert-success mt-2" role="alert"> Account Succefully Created </div>';
+          } else {
+            $regmsg = '<div class="alert alert-danger mt-2" role="alert"> Unable to Create Account </div>';
+          }
         }
       }
     }
