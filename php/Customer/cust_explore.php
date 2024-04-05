@@ -76,10 +76,12 @@
             color: #333333;
             margin-top: 10px;
         }
+        
     </style>
 </head>
 <body>
-<?php include_once('cust_nav.php'); ?>
+<?php include "cust_nav.php";?>
+
     <div class="container">
         <div class="search-bar-container">
             <i class="fas fa-search search-icon"></i>
@@ -87,51 +89,55 @@
         </div>
         <div class="category-container">
             <!-- Your category cards here -->
-            <div class="category-card" data-category="housework">
+            <div class="category-card" data-category="housework" onclick="loadCategoryPage('housework.php')">
                 <i class="fas fa-home fa-3x"></i>
                 <h3>Housework</h3>
             </div>
-            <div class="category-card" data-category="vehicle repair">
+            <div class="category-card" data-category="vehicle repair" onclick="loadCategoryPage('vehicle_repair.php')">
                 <i class="fas fa-car fa-3x"></i>
                 <h3>Vehicle Repair</h3>
             </div>
-            <div class="category-card" data-category="plumbing">
+            <div class="category-card" data-category="plumbing" onclick="loadCategoryPage('plumber.php')">
                 <i class="fas fa-wrench fa-3x"></i>
                 <h3>Plumbing</h3>
             </div>
-            <div class="category-card" data-category="carpenter">
+            <div class="category-card" data-category="carpenter" onclick="loadCategoryPage('carpenter.php')">
                 <i class="fas fa-hammer fa-3x"></i>
                 <h3>Carpenter</h3>
             </div>
-            <div class="category-card" data-category="electrical work">
+            <div class="category-card" data-category="electrical work" onclick="loadCategoryPage('electrical_work.php')">
                 <i class="fas fa-bolt fa-3x"></i>
                 <h3>Electrical Work</h3>
             </div>
-
-            <div class="category-card" data-category="pest control">
+            <div class="category-card" data-category="pest control" onclick="loadCategoryPage('pest_control.php')">
                 <i class="fas fa-bug fa-3x"></i>
                 <h3>Pest Control</h3>
             </div>
         </div>
     </div>
-
+ 
     <script>
-        function filterCategories() {
-            var input, filter, cards, card, category, i, txtValue;
-            input = document.querySelector('.search-bar');
-            filter = input.value.toLowerCase();
-            cards = document.querySelectorAll('.category-card');
-            for (i = 0; i < cards.length; i++) {
-                card = cards[i];
-                category = card.getAttribute('data-category');
-                txtValue = category.toLowerCase();
-                if (txtValue.indexOf(filter) > -1) {
-                    card.style.display = "";
-                } else {
-                    card.style.display = "none";
-                }
+    function filterCategories() {
+        var input, filter, cards, card, category, i, txtValue;
+        input = document.querySelector('.search-bar');
+        filter = input.value.toLowerCase();
+        cards = document.querySelectorAll('.category-card');
+        for (i = 0; i < cards.length; i++) {
+            card = cards[i];
+            category = card.getAttribute('data-category');
+            txtValue = category.toLowerCase();
+            if (txtValue.indexOf(filter) > -1) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
             }
         }
-    </script>
+    }
+
+    function loadCategoryPage(categoryPage) {
+        window.location.href = categoryPage;
+    }
+</script>
+
 </body>
 </html>
