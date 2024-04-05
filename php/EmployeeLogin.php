@@ -5,10 +5,11 @@ if(!isset($_SESSION['is_login'])){
   if(isset($_REQUEST['rEmail'])){
     $rEmail = mysqli_real_escape_string($conn,trim($_REQUEST['rEmail']));
     $rPassword = mysqli_real_escape_string($conn,trim($_REQUEST['rPassword']));
-    $sql = "SELECT empEmail, empPassword FROM technician_tb WHERE empEmail='".$rEmail."' AND empPassword='".$rPassword."' limit 1";
+    $sql = "SELECT empid, empEmail, empPassword FROM technician_tb WHERE empEmail='".$rEmail."' AND empPassword='".$rPassword."' limit 1";
     $result = $conn->query($sql);
     if($result->num_rows == 1){
-      
+      $row =  $result->fetch_assoc();
+      $_SESSION['rId'] = $row["empid"];
       $_SESSION['is_login'] = true;
       $_SESSION['rEmail'] = $rEmail;
       // Redirecting to RequesterProfile page on Correct Email and Pass

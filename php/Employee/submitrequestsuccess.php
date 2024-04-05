@@ -35,7 +35,7 @@ if($_SESSION['is_login']){
 <body>
 
 <?php
-$sql = "SELECT * FROM submitrequest_tb WHERE request_id = {$_SESSION['myid']}";
+$sql = "SELECT * FROM posts_tb WHERE request_id = {$_SESSION['myid']}";
 $result = $conn->query($sql);
 if($result->num_rows == 1){
  $row = $result->fetch_assoc();

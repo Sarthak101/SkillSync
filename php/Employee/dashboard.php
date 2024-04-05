@@ -1,5 +1,5 @@
 <?php
-    include ('../UserInfo/userinfo.php'); 
+    include ('userinfo.php'); 
 ?>
 
 <!DOCTYPE html>
