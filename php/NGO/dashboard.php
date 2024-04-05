@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../../css/dash.css">
+    <link rel="stylesheet" href="../../css/med_settings.css">
     <link rel="icon" type="image/x-icon" href="../../public/Icons/Bgtp.ico">
 
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -51,11 +52,11 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="#" onclick="loadIframe('work.php')">
+                        <a href="#" onclick="loadIframe('employees.php')">
                             <i class='bx bx-chat icon'></i>
                             <span class="text nav-text">Employees</span>
                         </a>
-                        <span class="tooltip">Check</span>
+                        <span class="tooltip">Employees</span>
                     </li>
 
                     <li class="nav-link">
