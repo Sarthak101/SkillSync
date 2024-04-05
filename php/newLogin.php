@@ -108,11 +108,11 @@ if(!isset($_SESSION['is_login'])){
           <br>
           <label for="pass" style="color: black;">Roles</label><br>
               <input type="radio" name="roles" value="Employer" required>
-              <label for="employer" style="color: black;">Employer</label>
+              <label for="employer" style="color: black;">Customer</label>
               <input type="radio" name="roles" value="Employee" required>
-              <label for="employee" style="color: black;">Employee</label>
+              <label for="employee" style="color: black;">Worker</label>
               <input type="radio" name="roles" value="Mediator" required>
-              <label for="mediator" style="color: black;">Mediator</label>
+              <label for="mediator" style="color: black;">NGO</label>
           </div>
           <button type="submit" class="btn btn-custom-yellow mt-5 btn-block shadow-sm font-weight-bold">Login</button>
           <?php if(isset($msg)) {echo $msg; } ?>

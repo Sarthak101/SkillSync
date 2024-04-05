@@ -2,7 +2,7 @@
 include_once('../dbconnection.php');
 
 // Retrieve plumber posts from the database
-$sql = "SELECT technician_tb.empName, posts_tb.price, posts_tb.description FROM posts_tb INNER JOIN technician_tb ON posts_tb.emp_id = technician_tb.empid WHERE posts_tb.job_title = 'electrical_work'";
+$sql = "SELECT technician_tb.empName, posts_tb.price, posts_tb.description FROM posts_tb INNER JOIN technician_tb ON posts_tb.emp_id = technician_tb.empid WHERE posts_tb.job_title = 'Electrical_Work'";
 $result = $conn->query($sql);
 
 // Check if the query was successful
@@ -19,6 +19,7 @@ $plumberPosts = $result->fetch_all(MYSQLI_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumber Posts</title>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
@@ -108,7 +109,11 @@ $plumberPosts = $result->fetch_all(MYSQLI_ASSOC);
                     <h3><?php echo $post['empName']; ?></h3>
                     <p>Price: ₹<?php echo $post['price']; ?></p>
                     <p>Description: <?php echo $post['description']; ?></p>
-                    <a href="https://buy.stripe.com/test_fZe4gOddzfCo0py000" class="buy-button" target="_blank">Buy</a>
+                    <form action="../../Stripeimpl/checkout.php" method="post">
+                    <input type="hidden" name="price" value="<?php echo $post['price']; ?>"> <!-- Hidden input field for price -->
+
+                        <button type="submit" class="buy-button">Buy</button>
+                    </form>                
                 </div>
             <?php endforeach; ?>
         </div>

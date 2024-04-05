@@ -109,7 +109,11 @@ $plumberPosts = $result->fetch_all(MYSQLI_ASSOC);
                     <h3><?php echo $post['empName']; ?></h3>
                     <p>Price: ₹<?php echo $post['price']; ?></p>
                     <p>Description: <?php echo $post['description']; ?></p>
-                    <a href="https://buy.stripe.com/test_fZe4gOddzfCo0py000" class="buy-button" target="_blank">Buy</a>
+                    <form action="../../Stripeimpl/checkout.php" method="post">
+                    <input type="hidden" name="price" value="<?php echo $post['price']; ?>"> <!-- Hidden input field for price -->
+
+                        <button type="submit" class="buy-button">Buy</button>
+                    </form>                
                 </div>
             <?php endforeach; ?>
         </div>
