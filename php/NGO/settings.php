@@ -17,7 +17,7 @@
                     <h3>Settings</h3>
                     <ul class="list-unstyled">
                         <li><a href="#profile">Edit Profile</a></li>
-                        <li><a href="#employees">Employees</a></li>
+                        <!-- <li><a href="#employees">Employees</a></li> -->
                         <li><a href="#account">Account</a></li>
                         <li><a href="#privacy">Privacy</a></li>
                         <li><a href="#notifications">Notifications</a></li>
@@ -29,7 +29,7 @@
             <div class="col-lg-9">
                 <div class="settings-content">
                     <?php include('profile_settings.php');?>
-                    <?php include('employees_settings.php');?>
+                    <!-- <?php include('employees_settings.php');?> -->
                     <?php include('account_settings.php');?>
                     <?php include('privacy_settings.php');?>
                     <?php include('notifications_settings.php');?>
@@ -70,9 +70,9 @@
             });
 
             // Show Employees section when clicked
-            $('a[href="#employees"]').on('click', function() {
-                $('#employees').show();
-            });
+            // $('a[href="#employees"]').on('click', function() {
+            //     $('#employees').show();
+            // });
         });
     </script>
 </body>
