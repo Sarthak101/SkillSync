@@ -3,6 +3,19 @@
     $postQuery = "SELECT * from posts_tb where emp_id = '$e_id'";
     $result = $conn->query($postQuery);
     $postings = $result->fetch_all(MYSQLI_ASSOC);
+
+    if(is_null($ngoId))
+    {
+        $ngoName = 'No NGO Affiliation';
+    }
+    else
+    {
+        $ngoInfoQuery = "SELECT * from adminlogin_tb where a_login_id = '$ngoId'";
+        $ngoresult = $conn->query($ngoInfoQuery);
+        $ngoRow = $ngoresult->fetch_all(MYSQLI_ASSOC)[0];
+        $ngoName = $ngoRow['a_name'];
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -76,7 +89,8 @@
         <div class="text-container">
             <h2>Welcome, <?php echo $name;?></h2>
             <hr class= "new4"></hr>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui rem maxime id adipisci ipsum corporis illum eaque soluta nihil doloribus ut sapiente dolor suscipit, voluptatem ipsa alias recusandae perferendis corrupti.</p>
+            <p>Email: <?php echo $email; ?></p>
+            <p>NGO: <?php echo $ngoName; ?></p>
         </div>
     </div>
 
@@ -92,7 +106,7 @@
                         <p class="job-title">Job Title: <?php echo $posts['job_title']; ?></p>
                         <p class="price">Price: <?php echo $posts['price']; ?></p>
                     </div>
-                    <button class="delete-btn" data-post-id="<?php echo $post['delete_post_id']; ?>">Delete</button>
+                    <button class="delete-btn" data-post-id="<?php echo $post['delete_post_id']; ?>">Delete(Under Construction)</button>
                 </div>
                 <!-- Add more post items here if needed -->
             </div>

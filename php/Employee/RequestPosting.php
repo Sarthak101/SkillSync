@@ -135,22 +135,6 @@ if(isset($_REQUEST['submitrequest'])){
         <input type="text" class="form-control" id="inputZip" name="requesterzip" onkeypress="isInputNumber(event)">
       </div>
     </div>
-
-    <!-- <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputEmail">Email</label>
-        <input type="email" class="form-control" id="inputEmail" name="requesteremail">
-      </div>
-      <div class="form-group col-md-2">
-        <label for="inputMobile">Mobile</label>
-        <input type="text" class="form-control" id="inputMobile" name="requestermobile" onkeypress="isInputNumber(event)">
-      </div>
-      <div class="form-group col-md-2">
-        <label for="inputDate">Date</label>
-        <input type="date" class="form-control" id="inputDate" name="requestdate">
-      </div>
-    </div> -->
-
     <button type="submit" class="btn btn-danger" style="background-color: #FFCF77; border-color: #FFCF77;" name="submitrequest">Submit</button>
     <button type="reset" class="btn btn-secondary">Reset</button>
   </form>

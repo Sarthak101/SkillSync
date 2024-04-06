@@ -9,5 +9,8 @@
     $usersRow = $usersTable_result->fetch_assoc();
 
     $name = $usersRow["empName"];
+    $email = $usersRow["empEmail"];
+    $phone = $usersRow["empMobile"];
+    $ngoId = $usersRow["ngo_id"];
 
 ?>
