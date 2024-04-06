@@ -77,7 +77,7 @@
     <div class="form-group">
       <label for="inputJobTitle">Affiliation with NGO: </label>
       <select class="form-control" id="inputJobTitle" name="ngo">
-        <option value="" disabled selected>Select an Option</option>
+        <option value="" selected>Select an Option</option>
         <?php foreach ($allNgo as $ngos): ?>
             <option value="<?php echo $ngos['a_login_id'] ?>"><?php echo $ngos['a_name'] ?></option>
         <?php endforeach ?>
