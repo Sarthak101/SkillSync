@@ -75,8 +75,14 @@ if(isset($_SESSION['is_login'])){
   <div class="logout">
     <a href="../logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
   </div>
+  <div class="checkStatus">
+    <a href="../../StripeImpl/check_status.php"><i class="fas fa-clipboard-check"></i> Check Orders (Under Construction)</a>
+  </div>
 </div>
 
 </body>
 </html>
+
+
+
 

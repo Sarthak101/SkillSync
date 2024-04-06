@@ -91,11 +91,11 @@
           <br>
         <i style="color: white;"></i><label for="pass" class="pl-2 font-weight-bold text-white">Roles</label><br>
               <input type="radio" name="roles" value="Employer" required>
-                <label for="employer">Employer</label>
+                <label for="employer" >Customer   </label>
               <input type="radio" name="roles" value="Employee" required>
-              <label for="employee">Employee</label>
+              <label for="employee">Worker   </label>
               <input type="radio" name="roles" value="Mediator" />
-              <label for="mediator">Mediator</label>
+              <label for="mediator">NGO   </label>
           </div>
         <button type="submit" class="btn btn-custom-yellow mt-5 btn-block shadow-sm font-weight-bold" name="rSignup">Sign Up</button>
         <!-- <button type="submit" class="btn btn-danger mt-5 btn-block shadow-sm font-weight-bold" name="rSignup">Sign Up</button> -->

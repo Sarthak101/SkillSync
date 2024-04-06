@@ -111,6 +111,8 @@ $plumberPosts = $result->fetch_all(MYSQLI_ASSOC);
                     <p>Description: <?php echo $post['description']; ?></p>
                     <form action="../../Stripeimpl/checkout.php" method="post">
                     <input type="hidden" name="price" value="<?php echo $post['price']; ?>"> <!-- Hidden input field for price -->
+                    <input type="hidden" name="empName" value="<?php echo $post['empName']; ?>"> <!-- Hidden input field for price -->
+                    <input type="hidden" name="description" value="<?php echo $post['description']; ?>"> <!-- Hidden input field for price -->
 
                         <button type="submit" class="buy-button">Buy</button>
                     </form>                

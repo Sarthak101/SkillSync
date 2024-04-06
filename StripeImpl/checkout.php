@@ -8,7 +8,8 @@ $stripe_secret_key = "sk_test_51P24ufSFNMhoeFhC3Zucpbj1uMigOBINhgOGLujTqNLWos65d
 
 // Retrieve price from the form or database, for example
 $price = $_POST['price'];
-
+$personName =$_POST['empName'];
+$desc =$_POST['description'];
 // Create a Stripe Checkout Session
 $checkout_session = \Stripe\Checkout\Session::create([
     "mode" => "payment",
@@ -20,7 +21,7 @@ $checkout_session = \Stripe\Checkout\Session::create([
                 "currency" => "inr",
                 "unit_amount" => $price * 100, // Convert amount to cents
                 "product_data" => [
-                    "name" => "Skill Sync Service"
+                    "name" => "Skill Sync Service from " . $personName . " (" . $desc . ")"
                 ]
             ],
             "quantity" => 1
