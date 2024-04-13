@@ -11,13 +11,14 @@ if(isset($_SESSION['is_login']) && isset($_SESSION['rEmail'])){
   $aEmail = $_SESSION['rEmail'];
 
   // Query to fetch the admin's name
-  $sqlAdmin = "SELECT a_name FROM adminlogin_tb WHERE a_email = '$aEmail'";
+  $sqlAdmin = "SELECT * FROM adminlogin_tb WHERE a_email = '$aEmail'";
   $resultAdmin = $conn->query($sqlAdmin);
 
   if($resultAdmin->num_rows == 1){
     // Fetch the admin's name
     $rowAdmin = $resultAdmin->fetch_assoc();
     $adminName = $rowAdmin['a_name'];
+    $adminId = $rowAdmin['a_login_id'];
   } else {
     // Admin name not found
     $adminName = "Admin";
@@ -38,7 +39,7 @@ $resultAssignWork = $conn->query($sqlAssignWork);
 $rowAssignWork = mysqli_fetch_row($resultAssignWork);
 $assignWorkCount = $rowAssignWork[0];
 
-$sqlTotalTech = "SELECT * FROM technician_tb";
+$sqlTotalTech = "SELECT * FROM technician_tb where ngo_id = '$adminId'";
 $resultTotalTech = $conn->query($sqlTotalTech);
 $totalTechCount = $resultTotalTech->num_rows;
 
