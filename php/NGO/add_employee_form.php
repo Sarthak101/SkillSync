@@ -32,3 +32,34 @@
 
     <button type="submit" class="btn btn-primary">Add Employee</button>
 </form>
+<div id="message" style="display: none;"></div>
+
+<script>
+    // Script to handle form submission and display message
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("addEmployeeForm");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Submit form data using Fetch API
+            fetch("add_employee.php", {
+                method: "POST",
+                body: new FormData(form)
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Display popup box with "OK" button
+                    alert("Employee added successfully!");
+                    form.reset(); // Reset form fields
+                } else {
+                    // Display error message in console
+                    console.error("Error adding employee: " + response.statusText);
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        });
+    });
+</script>
