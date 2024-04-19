@@ -63,7 +63,7 @@ $totalTechCount = $resultTotalTech->num_rows;
         <div class="card-header">Requests Received</div>
         <div class="card-body">
           <h4 class="card-title"><?php echo $empCount; ?></h4>
-          <a class="btn text-white" href="request.php">View</a>
+          <!-- <a class="btn text-white" href="request.php">View</a> -->
         </div>
       </div>
     </div>
@@ -78,10 +78,10 @@ $totalTechCount = $resultTotalTech->num_rows;
     </div> -->
     <div class="col-sm-6 mt-5">
       <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
-        <div class="card-header">No. of Technicians</div>
+        <div class="card-header">No. of Employees</div>
         <div class="card-body">
           <h4 class="card-title"><?php echo $totalTechCount; ?></h4>
-          <a class="btn text-white" href="technician.php">View</a>
+          <!-- <a class="btn text-white" href="technician.php">View</a> -->
         </div>
       </div>
     </div>

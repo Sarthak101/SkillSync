@@ -1,5 +1,7 @@
 <div id="notifications" style="display:none;">
     <h2>Notifications Settings</h2>
+    <br>
+    <br>
     <div class="form-check">
         <input class="form-check-input" type="checkbox" id="emailNotifications">
         <label class="form-check-label" for="emailNotifications">
@@ -12,5 +14,7 @@
             Receive push notifications
         </label>
     </div>
+    <br>
+    <br>
     <button type="submit" class="btn btn-primary">Save Changes</button>
 </div>

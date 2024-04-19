@@ -1,5 +1,7 @@
 <div id="security" style="display:none;">
     <h2>Security Settings</h2>
+    <br>
+    <br>
     <div class="mb-3">
         <label for="currentPassword" class="form-label">Current Password</label>
         <input type="password" class="form-control" id="currentPassword" placeholder="Enter current password">
@@ -12,5 +14,7 @@
         <label for="confirmNewPassword" class="form-label">Confirm New Password</label>
         <input type="password" class="form-control" id="confirmNewPassword" placeholder="Confirm new password">
     </div>
+    <br>
+    <br>
     <button type="submit" class="btn btn-primary">Change Password</button>
 </div>
