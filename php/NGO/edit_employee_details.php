@@ -1,4 +1,3 @@
-<!-- edit_employee_details.php -->
 <?php
 // Include your database connection file
 include_once "../dbConnection.php";
@@ -20,11 +19,12 @@ if (mysqli_num_rows($result) > 0) {
         echo "<td><input type='text' name='empMobile[]' value='" . $row['empMobile'] . "'></td>";
         echo "<td><input type='email' name='empEmail[]' value='" . $row['empEmail'] . "'></td>";
         echo "<td><input type='text' name='empZip[]' value='" . $row['empZip'] . "'></td>";
+        echo "<input type='hidden' name='empId[]' value='" . $row['empid'] . "'>";
         echo "</tr>";
     }
     echo "</tbody>";
     echo "</table>";
-    echo "<input type='submit' value='Done'>";
+    echo "<input type='submit' name='updateTechnician' value='Done'>";
     echo "</form>";
 } else {
     echo "<p>No employees found</p>";

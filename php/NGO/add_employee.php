@@ -32,7 +32,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             if ($conn->query($sql) === TRUE) {
                 // Display popup box with "OK" button
-                echo "<script>alert('Employee added successfully!');</script>";
+                echo '<script>';
+        echo 'alert("Employee added Successfully!");';
+        echo "window.location.href = 'employees.php';"; 
+        echo '</script>';
             } else {
                 // Display error message in console
                 echo "<script>console.error('Error adding employee: " . $conn->error . "');</script>";

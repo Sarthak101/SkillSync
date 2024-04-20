@@ -40,6 +40,7 @@ if(isset($_POST['empid'])) {
         // JavaScript alert after successful deletion
         echo '<script>';
         echo 'alert("Employee(s) Deleted Successfully!");';
+        echo "window.location.href = 'employees.php';"; 
         echo '</script>';
     } else {
         echo "Error deleting employee: " . $conn->error;
