@@ -2,7 +2,7 @@
 require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/dbconnection.php'; // Include your database connection file
 
-$stripe_secret_key = "sk_test_51P24ufSFNMhoeFhC3Zucpbj1uMigOBINhgOGLujTqNLWos65dYFgIoMGbxI3ntiXNIAeC2hRd0zsaGhgClRHoFCZ00gyrOFpix";
+$stripe_secret_key = "API KEY";
 
 \Stripe\Stripe::setApiKey($stripe_secret_key);
 
